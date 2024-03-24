@@ -9,19 +9,18 @@
     <title>Futebol</title>
 </head>
 
-<body>
+<body onscroll="changeNav()">
     <div id="Inicio">
         <nav id="nav" class="navbar">
             <a href="#Inicio"><img src="./src/assets/Logo.png" class="logo"></a>
 
             <ul class="nav-list">
-                <li class="nav-list-item"><a href="#Sobre" class="nav-links">Sobre <div class="linkLine"></div></a></li>
-                <li class="nav-list-item"><a href="#Inicio" class="nav-links">A história <div class="linkLine"></div>
-                        </a></li>
-                <li class="nav-list-item"><a href="#Inicio" class="nav-links">As Lendas <div class="linkLine"></div></a>
+                <li class="nav-list-item"><a href="#Sobre" class="nav-links">Sobre</a></li>
+                <li class="nav-list-item"><a href="#Inicio" class="nav-links">A história
+                    </a></li>
+                <li class="nav-list-item"><a href="#Inicio" class="nav-links">As Lendas</a>
                 </li>
-                <li class="nav-list-item"><a href="#Inicio" class="nav-links">Desenvolvedor <div class="linkLine"></div>
-                        </a></li>
+                <li class="nav-list-item"><a href="#Inicio" class="nav-links">Desenvolvedor</a></li>
             </ul>
         </nav>
 
@@ -36,7 +35,7 @@
         </div>
 
         <div class="btnContainer">
-            ><a href="#Sobre" class="nav-links"><button class="mainButton">Saiba Mais!</button></a>
+            <a href="#Sobre" class="mainButton">Saiba Mais!</a>
         </div>
     </div>
     <div id="Sobre">
@@ -47,3 +46,9 @@
 </body>
 
 </html>
+
+<script>
+    function changeNav(){
+        nav.classList.toggle("active", scrollY > 0);
+    }
+</script>

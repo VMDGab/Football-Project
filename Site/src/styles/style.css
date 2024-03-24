@@ -1,17 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    background-color: #000;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ff762c;
+    border-radius: 30px;
 }
 
 #Inicio {
-    background-image: url(../assets/background.svg);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.500) 35%, rgba(41, 41, 41, 0.500) 100%), url(../assets/background.svg);
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     margin: 0;
-    ;
+    background-size: cover;
 }
 
 .navbar {
@@ -22,53 +38,76 @@ body {
     height: 135px;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 10px;
+    z-index: 1;
 
+    transition: all .6s ease-in-out;
 }
 
-.logo{
-    margin-left: -100px;
-}
 .nav-list {
     display: flex;
     width: 45%;
     justify-content: space-between;
-    color: #fff;
     list-style: none;
-
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 25px;
     text-transform: uppercase;
 }
 
+.navbar.active {
+    background-color: #ffffffdb;
+    box-shadow: #292929 0 2px 20px;
+}
+
+.navbar.active .nav-links {
+    color: #292929;
+}
+
+.navbar.active .nav-links::after {
+    background-color: #E96A27;
+}
+
+
+
+.logo {
+    margin-left: -100px;
+}
+
 .nav-links {
     text-decoration: none;
     color: #fff;
-    transition: all .4s ease-in-out;
 
     display: flex;
     flex-direction: column;
+    position: relative;
+    transition: all .4s ease-in-out;
+    align-items: center;
 }
 
-.linkLine {
-    width: 100%;
+.nav-links::after {
+    content: "";
+    position: absolute;
+    width: 50px;
     height: 3px;
     border-radius: 20px;
     margin-top: 5px;
     background-color: #fff;
+    bottom: -8px;
+    text-align: center;
+    transition: all .4s ease-in-out;
 }
 
-.nav-links:hover {
-    color: #ff762c;
-
-    .linkLine {
-        background-color: #ff762c;
-        transition: all .4s ease-in-out;
-    }
+.nav-links:hover,
+.navbar.active .nav-links:hover {
+    color: #E96A27;
 }
 
-.presentation{
+.nav-links:hover::after {
+    background-color: #E96A27;
+}
+
+.presentation {
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -77,20 +116,20 @@ body {
     padding-left: 300px;
 }
 
-.Welcome{
+.Welcome {
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 84px;
     margin-bottom: -5px;
 }
 
-.text{
+.text {
     font-family: "Exo 2";
     font-weight: 500;
     font-size: 30px;
 }
 
-.btnContainer{
+.btnContainer {
     display: flex;
     justify-content: center;
 }
@@ -99,12 +138,14 @@ body {
     0% {
         transform: translateY(20px);
     }
+
     100% {
         transform: translateY(0);
     }
 }
-.mainButton{
-    background: linear-gradient(0.40turn, #E96A27, #8F2626);
+
+.mainButton {
+    background: linear-gradient(0.40turn, #8F2626, #E96A27);
     height: 60px;
     width: 250px;
     border-radius: 30px;
@@ -113,19 +154,43 @@ body {
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 23px;
-    box-shadow: #48220d 0 5px 15px 0 ;
+    box-shadow: #48220d 0 5px 15px 0;
     animation: up-down 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    position: relative;
 }
 
-.mainButton:hover{
-    background:  #E96A27;
-    transition: all 1s ease-in-out;
+.mainButton::before {
+    content: "Saiba Mais!";
+    position: absolute;
+    display: flex;
+
+    background: linear-gradient(0.40turn, #E96A27, #8F2626);
+    transition: all .4s ease-in-out;
+
+    height: 60px;
+    width: 250px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 23px;
+    box-shadow: #48220d 0 5px 15px 0;
+
+    align-items: center;
+    justify-content: center;
 }
+
+.mainButton:hover::before {
+    opacity: 0;
+}
+
 #Sobre {
     width: 100%;
     height: 100vh;
