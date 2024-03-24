@@ -124,7 +124,7 @@ body {
 
 .mainButton:hover{
     background:  #E96A27;
-    transition: all 1s ;
+    transition: all 1s ease-in-out;
 }
 #Sobre {
     width: 100%;
