@@ -217,7 +217,7 @@ body::-webkit-scrollbar-thumb {
 .Title{
     font-family: "Exo 2";
     font-weight: 700;
-    font-size: 36px;
+    font-size: 44px;
     color: #292929;
     position: relative;
     display: flex;
@@ -236,8 +236,9 @@ body::-webkit-scrollbar-thumb {
 }
 .capitulo{
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    width: 100%;
+   align-items: center;
 }
 
 .mainText{
@@ -249,3 +250,15 @@ body::-webkit-scrollbar-thumb {
 .red{
     color: #c00000;
 }
+
+.green{
+    color: #51b58d;
+}
+
+.brasil{
+    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(255,209,0,1) 100%);
+    }
+
+.pele{
+    height: 300px;
+         }
