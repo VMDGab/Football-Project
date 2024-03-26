@@ -15,12 +15,12 @@
             <a href="#Inicio"><img src="./src/assets/Logo.png" class="logo"></a>
 
             <ul class="nav-list">
-                <li class="nav-list-item"><a href="#Sobre" class="nav-links">Sobre</a></li>
-                <li class="nav-list-item"><a href="#Inicio" class="nav-links">A história
+                <li class="nav-list-item"><a href="#Historia" class="nav-links">A história
                     </a></li>
                 <li class="nav-list-item"><a href="#Inicio" class="nav-links">As Lendas</a>
                 </li>
                 <li class="nav-list-item"><a href="#Inicio" class="nav-links">Desenvolvedor</a></li>
+                <li class="nav-list-item"><a href="#Quiz" class="nav-links">Quiz</a></li>
             </ul>
         </nav>
 
@@ -35,20 +35,48 @@
         </div>
 
         <div class="btnContainer">
-            <a href="#Sobre" class="mainButton">Saiba Mais!</a>
+            <a href="#Historia" class="mainButton">Saiba Mais!</a>
         </div>
     </div>
-    <div id="Sobre">
+    <div id="Historia">
+        <div class="content">
+            <p class="Title">A Origem</p>
+            <div class="capitulo" id="origem">
+                <img class="images" src="./src/assets/China.jpg">
+                <p class="mainText">Quase todas as culturas do mundo possuem alguma referência ao <span class="red">futebol.</span><br>
+                    Chineses, japoneses, italianos, gregos antigos, persas, vikings e muitos <br>
+                    outros povos já jogavam algum tipo de jogo de bola em tempos muitos distantes. <br>
+                    Porém, foi na <span class="red">Inglaterra</span> que o futebol realmente começou a tomar forma. <br>
+                    Tudo começou em 1863, quando duas associações de jogos de bola se <br>
+                    separaram, porque os partidários do "rugby" não aceitavam um jogo em que <br>
+                    era proibido segurar a bola com as mãos. E isso acabou dando origem à <br>
+                    <span class="red">The English Football Association</span>, primeira associação inglesa de futebol.
+                </p>
+            </div>
+        </div>
 
+        <div class="content right">
+            <p class="Title">A Copa do mundo</p>
+            <div class="capitulo" id="CopaDoMundo">
+                <p class="mainText">A história da Copa do Mundo de futebol começa em 1928 quando o <br>
+                    francês <span class="red">Jules Rimet</span> assume o comando da Federação Internacional de <br>
+                    Futebol (FIFA) e começa a organizar a primeira competição de futebol mundial.<br>
+                    A estreia do evento aconteceu em 1930 no Uruguai e contou com a <br>
+                    participação de 13 seleções convidadas. Argentina, Bélgica, Brasil, <br>
+                    Bolívia, Chile, Estados Unidos, França, Iugoslávia, México, Paraguai, <br>
+                    Peru, Romênia, Uruguai.
 
-        </nav>
+                </p>
+                <img class="images" src="./src/assets/uruguai1930.jpg   ">
+            </div>
+        </div>
     </div>
 </body>
 
 </html>
 
 <script>
-    function changeNav(){
+    function changeNav() {
         nav.classList.toggle("active", scrollY > 0);
     }
 </script>

@@ -20,6 +20,12 @@ body::-webkit-scrollbar-thumb {
     background-color: #ff762c;
     border-radius: 30px;
 }
+.images{
+    border: 5px solid #292929;
+    border-radius: 30px;
+    box-shadow: #292929 -5px 7px 10px;
+    width: 400px;
+}
 
 #Inicio {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.500) 35%, rgba(41, 41, 41, 0.500) 100%), url(../assets/background.svg);
@@ -97,7 +103,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 5px;
     background-color: #fff;
     bottom: -8px;
-    text-align: center;
+ 
     transition: all .4s ease-in-out;
 }
 
@@ -194,8 +200,52 @@ body::-webkit-scrollbar-thumb {
     opacity: 0;
 }
 
-#Sobre {
+#Historia {
     width: 100%;
     height: 100vh;
+   padding-top: 200px;
+}
+.content{
+    padding: 0 150px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+.Title{
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 36px;
+    color: #292929;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    }
 
+.Title::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #c00000;
+    bottom: -6px;
+    border-radius: 20px;
+    
+}
+.capitulo{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.mainText{
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 20px;
+    color: #292929;
+}
+.red{
+    color: #c00000;
 }
