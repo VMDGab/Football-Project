@@ -288,7 +288,7 @@ body::-webkit-scrollbar-thumb {
     border: none;
     background: none;
     cursor: pointer;
-    
+
 }
 
 .cta:before {
@@ -298,42 +298,45 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     display: block;
     border-radius: 50px;
-    background: #fff;
+    background: transparent;
     width: 45px;
     height: 45px;
     transition: all 0.3s ease;
 }
 
-.cta span {
+.spanBtn {
     position: relative;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Exo 2";
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.05em;
-    color: #E96A27;
+    color: #292929;
 }
 
-.cta svg {
+.svg {
     position: relative;
     top: 0;
     margin-left: 10px;
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke: #fff;
+    stroke: #292929;
     stroke-width: 2;
     transform: translateX(-5px);
     transition: all 0.3s ease;
+   }
+
+.navbar.active .spanBtn{
+    color: #404040;
+}
+.navbar.active .svg{
+    stroke: #404040;
 }
 
-.cta:hover:before {
+ .cta:hover:before {
     width: 100%;
-    background-color: #E96A27;
+    background-color:  #ff7429ac;
 }
-.cta:hover span{
-color: #fff;
-}
-
 
 .cta:hover svg {
     transform: translateX(0);
