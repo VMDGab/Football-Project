@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/style.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Futebol</title>
 </head>
 
@@ -42,11 +42,13 @@
         <div class="content">
             <p class="Title">A Origem</p>
             <div class="capitulo" id="origem">
-                <img class="images" src="./src/assets/China.jpg">
-                <p class="mainText">Quase todas as culturas do mundo possuem alguma referência ao <span class="red">futebol.</span><br>
+                <img class="images" data-aos="zoom-in-right" src="./src/assets/China.jpg">
+                <p class="mainText" data-aos="fade-right">Quase todas as culturas do mundo possuem alguma referência ao <span
+                        class="red">futebol.</span><br>
                     Chineses, japoneses, italianos, gregos antigos, persas, vikings e muitos <br>
                     outros povos já jogavam algum tipo de jogo de bola em tempos muitos distantes. <br>
-                    Porém, foi na <span class="red">Inglaterra</span> que o futebol realmente começou a tomar forma. <br>
+                    Porém, foi na <span class="red">Inglaterra</span> que o futebol realmente começou a tomar forma.
+                    <br>
                     Tudo começou em 1863, quando duas associações de jogos de bola se <br>
                     separaram, porque os partidários do "rugby" não aceitavam um jogo em que <br>
                     era proibido segurar a bola com as mãos. E isso acabou dando origem à <br>
@@ -58,7 +60,7 @@
         <div class="content right">
             <p class="Title">A Copa do mundo</p>
             <div class="capitulo" id="CopaDoMundo">
-                <p class="mainText">A história da Copa do Mundo de futebol começa em 1928 quando o <br>
+                <p class="mainText" data-aos="fade-left">A história da Copa do Mundo de futebol começa em 1928 quando o <br>
                     francês <span class="red">Jules Rimet</span> assume o comando da Federação Internacional de <br>
                     Futebol (FIFA) e começa a organizar a primeira competição de futebol mundial.<br>
                     A estreia do evento aconteceu em 1930 no Uruguai e contou com a <br>
@@ -67,15 +69,15 @@
                     Peru, Romênia, Uruguai.
 
                 </p>
-                <img class="images" src="./src/assets/uruguai1930.jpg   ">
+                <img class="images" data-aos="zoom-in-left" src="./src/assets/uruguai1930.jpg   ">
             </div>
         </div>
 
         <div class="content brasil">
             <p class="Title green">O REI!</p>
             <div class="capitulo" id="pele">
-                <img class="pele" src="./src/assets/pele.svg">
-                <p class="mainText">História do maior jogador de futebol do mundo começou a ser <br>
+                <img class="pele" data-aos="zoom-in-right" src="./src/assets/pele.svg">
+                <p class="mainText" data-aos="fade-right">A história do maior jogador de futebol do mundo começou a ser <br>
                     construída na Suécia, em 1958, quando o rei, aos 17 anos, <br>
                     conquistou a primeira de suas três Copas - um feito que, até hoje, <br>
                     nenhum outro jogador alcançou. Pelé ajudou a construir a <br>
@@ -87,7 +89,7 @@
             <br>
             <br>
             <div class="capitulo" id="Brasil">
-                <p class="mainText">Após 58, o Brasil se tornou referência mundial no futebol, <br>
+                <p class="mainText" data-aos="fade-left">Após 58, o Brasil se tornou referência mundial no futebol, <br>
                     ganhando 3 títulos entre 58 e 70, porém após isso, a seleção ficou <br>
                     24 anos de jejum, tendo grandes seleções durante o periodo, <br>
                     como a seleção de 82 liderada por Zico, Sócrates e Falcão. <br>
@@ -96,16 +98,43 @@
                     derrota na final de 98, o Brasil superou a Alemanha na final de <br>
                     2002, com 2 gols de Ronaldo Fenômeno na final.
                 </p>
-                <img class="images" src="./src/assets/penta.png">
+                <img class="images" data-aos="zoom-in-left" src="./src/assets/ronaldo.jpeg">
             </div>
         </div>
+        <div class="content cruyff">
+            <p class="Title white">A revolução tática</p>
+            <div class="capitulo" >
+                <p class="mainText white" data-aos="fade-up-right" >Se você já ouviu a expressão “futebol moderno” para explicar o jogo de equipes
+                    como Barcelona,
+                    Bayern e Tottenham, sabe de onde vem as influências e ideias que moldaram o esporte praticado há
+                    anos.
+                    Pense na Lei do Impedimento e o Arsenal de Herbert Chapman. A Hungria de Puskas.
+                    O Brasil de Pelé, Zagallo e a invenção do 4-3-3. A Inglaterra campeã em 1966.
+                    De lá pra cá, todas as mudanças e revoluções do futebol começam e terminam em um nome: Johan Cruyff.
+                    Era a concepção de ideia que mudou profundamente o jogo: linhas avançadas, intensidade e marcação
+                    por
+                    pressão para não dar tempo e espaço ao adversário. Com a bola, troca de passes, inversão de posições
+                    e mentalidade ofensiva. Junto com o mentor Rinus Michels, a Holanda de 1974 chocou o mundo.
+                    No Barcelona, Cruyff ajudou a acabar com o jejum de títulos, coroado com um 5x0 no Real Madrid,
+                    e formou as bases da filosofia blaugrana: jogar bem acima do resultado. Não deixar de atacar como
+                    forma de respeito ao jogo e ao adversário. Coletivo, valorizando a inteligência e o passe.
+                   </p>
+                <img class="johan" data-aos="fade-left" src="./src/assets/johanteste.png">
+            </div>
+        </div>
+
+      
     </div>
 </body>
 
 </html>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     function changeNav() {
         nav.classList.toggle("active", scrollY > 0);
     }
 </script>
+<script>
+    AOS.init();
+  </script>
