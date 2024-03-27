@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     justify-content: space-around;
     width: 100%;
-    height: 135px;
+    height: 105px;
 
     align-items: center;
     padding-top: 10px;
@@ -80,8 +80,8 @@ body::-webkit-scrollbar-thumb {
 
 .logo {
 
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
 }
 
 .nav-links {
@@ -203,7 +203,7 @@ body::-webkit-scrollbar-thumb {
 
 #Historia {
     width: 100%;
-    height: 100vh;
+   
     padding-top: 100px;
 }
 
@@ -281,7 +281,7 @@ body::-webkit-scrollbar-thumb {
     height: 400px;
 }
 
-.cta {
+.btn {
     position: relative;
     padding: 12px 18px;
     transition: all 0.2s ease;
@@ -291,7 +291,7 @@ body::-webkit-scrollbar-thumb {
 
 }
 
-.cta:before {
+.btn:before {
     content: "";
     position: absolute;
     top: 0;
@@ -310,7 +310,8 @@ body::-webkit-scrollbar-thumb {
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.05em;
-    color: #292929;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
 }
 
 .svg {
@@ -320,10 +321,10 @@ body::-webkit-scrollbar-thumb {
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke: #292929;
+    stroke: #fff;
     stroke-width: 2;
     transform: translateX(-5px);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease-in-out;
    }
 
 .navbar.active .spanBtn{
@@ -333,15 +334,138 @@ body::-webkit-scrollbar-thumb {
     stroke: #404040;
 }
 
- .cta:hover:before {
+ .btn:hover:before {
     width: 100%;
     background-color:  #ff7429ac;
 }
 
-.cta:hover svg {
+.btn:hover svg {
     transform: translateX(0);
 }
 
-.cta:active {
+.btn:active {
     transform: scale(0.95);
 }
+
+#Lendas{
+    width: 100%;
+   height: 100vh;
+   background-color:#009ec0;
+    display: flex;
+    justify-content:center ;
+    align-items: flex-end;
+    padding-top: 50px;
+}
+
+.infoContainer{
+ display: flex;
+ justify-content: space-around;
+ width: 100%;
+ height: 80%;
+ align-items: flex-start;
+
+}
+
+.overview{
+    width: 400px;
+   }
+
+.description{
+    width: 400px;
+}
+.playerSvg{
+    position: absolute;
+    z-index: 1;
+}
+
+.namePlayer{
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 64px;
+    color: #ffd100;
+    font-style: normal; 
+    margin: 0;
+    text-shadow: #555555 -5px 10px 10px;
+   
+}
+.NumberPosition{
+    display: flex;
+    align-items: flex-end;
+    
+}
+.number{
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 74px;
+    color: #ffd100;
+    margin-bottom: -8px;
+}
+.position{
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 40px;
+    color: #ffd100;
+    font-style: italic;
+}
+
+.infoFooter{
+    position:absolute;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.statsContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.stats{
+    width: 200px;
+    height: 150px;
+    background-color: #fff;
+    border: #009ec0 5px solid;
+    border-radius: 20px;
+    margin: 40px 25px;
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.statsText{
+    color: #ffd100;
+    margin-right: 5px;
+}
+
+.btnPlayer{
+    background-color: #292929;
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 40px;
+    margin: 10px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    z-index: 2;
+    transition: all .4s ease-in-out;
+}
+
+
+.btnPlayer:hover{
+    background: linear-gradient(144deg,#8F2626, #E96A27);
+}
+
+.btnPlayer:active{
+    transform: scale(0.9);
+}
+
