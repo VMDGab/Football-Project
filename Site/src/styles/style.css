@@ -354,7 +354,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content:center ;
     align-items: flex-end;
-    padding-top: 50px;
+  
 }
 
 .infoContainer{

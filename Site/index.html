@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./src/assets/Logo.png">
     <title>Futebol</title>
 </head>
 
@@ -23,6 +24,7 @@
                 <li class="nav-list-item"><a href="#Inicio" class="nav-links">Desenvolvedor</a></li>
                 <li class="nav-list-item"><a href="#Quiz" class="nav-links">Quiz</a></li>
             </ul>
+            <a href="./cadastro.html" style="text-decoration: none;">
             <button class="btn">
                 <span class="spanBtn">CADASTRE-SE</span>
                 <svg class="svg" width="15px" height="10px" viewBox="0 0 13 10">
@@ -30,6 +32,7 @@
                     <polyline points="8 1 12 5 8 9"></polyline>
                 </svg>
             </button>
+        </a>
         </nav>
 
         <div class="presentation">
@@ -166,16 +169,18 @@
         </div>
     </div>
 
+    
+
 </body>
 
 </html>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+    AOS.init();
+</script>
+<script>
     function changeNav() {
         nav.classList.toggle("active", scrollY > 0);
     }
-</script>
-<script>
-    AOS.init();
 </script>
