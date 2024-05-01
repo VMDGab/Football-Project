@@ -24,6 +24,7 @@ body{
     justify-content: space-around;
    
     height: 200px;
+    z-index: 1;
 }
 .content{
     width: 100%;    
@@ -77,8 +78,8 @@ body{
 
 .logo {
 
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     margin-right: 1000px;
 }
 
@@ -171,4 +172,11 @@ body{
 .btnModal:hover{
     background-color: #292929;
     color: #F5F5F5;
+}
+
+.logout{
+    transition: all .5s ease-in-out;
+}
+.logout:active{
+    transform: scale(.9);
 }

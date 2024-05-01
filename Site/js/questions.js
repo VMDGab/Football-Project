@@ -5,7 +5,9 @@ const q1 = {
     alternativaB: "Brasil",
     alternativaC: "Mexico",
     alternativaD: "Itália",
-    correta: "Brasil"
+    correta: "Brasil",
+    valor: 300
+
 }
 const q2 = {
     numQuestao: 2,
@@ -14,7 +16,8 @@ const q2 = {
     alternativaB: "Crisciuma",
     alternativaC: "Milan",
     alternativaD: "Barcelona",
-    correta: "Real Madrid"
+    correta: "Real Madrid",
+    valor: 200
 }
 const q3 = {
     numQuestao: 3,
@@ -23,8 +26,29 @@ const q3 = {
     alternativaB: "Erling Haaland",
     alternativaC: "Cristiano Ronaldo",
     alternativaD: "Xavi",
-    correta: "Cristiano Ronaldo"
+    correta: "Cristiano Ronaldo",
+    valor: 200
+}
+const q4 = {
+    numQuestao: 4,
+    pergunta: "Quem foi o autor do gol da final do mundial de clubes de 2006?",
+    alternativaA: "Ronaldinho Gaucho",
+    alternativaB: "Fernandão",
+    alternativaC: "Messi",
+    alternativaD: "Adriano Gabiru",
+    correta: "Adriano Gabiru",
+    valor: 500
+}
+const q5 = {
+    numQuestao: 4,
+    pergunta: "Quem perdeu o penalti decicivo na disputa de penaltis da final da copa de 1994?",
+    alternativaA: "Bebeto",
+    alternativaB: "Baggio",
+    alternativaC: "Dunga",
+    alternativaD: "Zola",
+    correta: "Baggio",
+    valor: 500
 }
 
 
-const questoes = [q1, q2, q3]
+const questoes = [q1, q2, q3, q4, q5]

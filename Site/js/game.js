@@ -15,7 +15,6 @@ let pontuacao = 0
 let acertos = 0
 
 
-console.log(questoes.length)
 pergunta.textContent = questoes[nQuestao].pergunta
 
 a.textContent = questoes[nQuestao].alternativaA
@@ -40,7 +39,7 @@ function checkAnswer(resposta) {
     let respostaCorreta = questoes[nQuestao].correta
 
     if (respostaUsuario == respostaCorreta) {
-        pontuacao += 100
+        pontuacao += questoes[nQuestao].valor
         acertos += 1
     }
     

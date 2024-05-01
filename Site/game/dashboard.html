@@ -17,10 +17,8 @@
             <a href="./ranking.html" class="option">Ranking</a>
         </div>
 
-        <a href="../login.html">
-        <i class="fa-solid fa-right-from-bracket fa-2xl" style="color: #f5f5f5;" class="logout"></i>
-        </a>
-    </div>
+        <i class="fa-solid fa-right-from-bracket fa-2xl logout" style="color: #f5f5f5;" onclick="logout()"></i>
+       </div>
     <div class="content">
         <div class="options">
             <a href="../game/game.html">
@@ -58,5 +56,8 @@
     }
     function closeModal(){
         instrucoes.close()
+    }
+    function logout(){
+        location.replace('../login.html')
     }
 </script>
