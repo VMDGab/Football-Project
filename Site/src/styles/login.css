@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0
+}
+
+#content {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.500) 35%, rgba(41, 41, 41, 0.500) 100%), url(../assets/background.svg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    margin: 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    height: 105px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2%;
+
+}
+
+.logo {
+    height: 100px;
+    margin-left: 6%;
+}
+
+.goBack {
+    margin-right: 6%;
+}
+
+.btn {
+    position: relative;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: transparent;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.spanBtn {
+    position: relative;
+    font-family: "Exo 2";
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #fff;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.4s ease-in-out;
+}
+
+.btn:hover:before {
+    width: 100%;
+    background-color: #ff7429ac;
+}
+
+.btn:hover svg {
+    transform: translateX(0);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.SignIn {
+    width: 50%;
+    height: 70%;
+    background-color: #292929b7;
+    margin-top: 2%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.signInContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.signInTitle {
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 44px;
+    color: #ff7429;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.mainText {
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 24px;
+    color: #f5f5f5;
+}
+
+.SignUp {
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 24px;
+    color: #f5f5f5;
+}
+
+.cadastro {
+    color: #ff7429;
+    text-decoration: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.inputTitle {
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 24px;
+    color: #f5f5f5;
+}
+
+.input {
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-family: "Exo 2";
+    font-weight: 700;
+}
+
+.signInBtn {
+    background: linear-gradient(0.40turn, #8F2626, #E96A27);
+    height: 50px;
+    width: 250px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow: #48220d 0 5px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    margin-top: 26px;
+}
+
+.signInBtn::before {
+    content: "Entrar!";
+    position: absolute;
+    display: flex;
+
+    background: linear-gradient(0.40turn, #E96A27, #8F2626);
+    transition: all .4s ease-in-out;
+
+    height: 50px;
+    width: 250px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow: #48220d 0 5px 15px 0;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.signInBtn:hover::before {
+    opacity: 0;
+}
+
+.modal{
+border: 6px solid #E96A27;
+border-radius: 20px ;
+
+width: 36%;
+height: 42%;
+box-shadow: #292929 0 6px 10px;
+}
+.dialog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#error::backdrop{
+    background-color: #29292997;
+}
+.ErrorModal{
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 40px;
+    color: #E96A27;
+}
+#msgError{
+    font-family: "Exo 2";
+    font-weight: 500;
+    font-size: 24px;
+    color: #E96A27;
+}
+
+.btnModal{
+    background: linear-gradient(0.40turn, #8F2626, #E96A27);
+    height: 40px;
+    width: 150px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow: #48220d 0 5px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 6%;    
+}
+
+
+.successModal{
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 40px;
+    color: #E96A27;
+}
+#msgSucess{
+    font-family: "Exo 2";
+    font-weight: 500;
+    font-size: 24px;
+    color: #292929;
+    text-align: center;
+}
+#msg{
+    font-family: "Exo 2";
+    font-weight: 500;
+    font-size: 24px;
+    color: #292929;
+    text-align: center;
+}
+
+@keyframes fadein{
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
+        }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+     
+    }
+}
+
+dialog[open]{
+    animation: fadein .5s ease forwards;
+}

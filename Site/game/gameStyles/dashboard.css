@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+   margin: 0;
+   background: #292929 url(../gameAssets/messiBG.svg);
+   background-repeat: no-repeat;
+   background-size: cover; 
+ 
+   
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.content{
+    width: 100%;    
+    height: 80vh;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.options{
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    background-color: #292929c6;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn{
+    width: 350px;
+    height: 60px;
+    border-radius: 20px;
+    border: solid 3px #009EC0;
+    font-family: "Exo 2";
+    font-weight: 900;
+    font-style: italic;
+    color: #009EC0;
+    font-size: 22px;
+    box-shadow: #292929 4px 6px 10px;
+    transition: all .5s ease-in-out;
+    position: relative;
+}
+
+
+
+.btn:active{
+    transform: scale(.9);
+}
+
+.btn:hover{
+    background-color: #009EC0;
+    color: #F5F5F5;
+}
+
+.logo{
+    width: 120px;
+    height: 120px;
+    margin-right: 1000px;
+}
+
+.menuOptions{
+    display: flex;
+    width: 500px;   
+    height: 80px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #292929c6;
+    border-radius: 80px;
+    position: absolute;
+}
+
+.option{
+    font-family: "Exo 2";
+    font-weight: 900;
+    font-style: italic;
+    color: #F5F5F5;
+    font-size: 28px;
+    text-decoration: none;
+    width: 45%;
+    border-radius: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+    
+}
+.option:hover{
+    background-color: #009EC0;
+
+}
+

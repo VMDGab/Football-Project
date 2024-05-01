@@ -12,18 +12,25 @@ function Verificar(){
     const close = btnClose
     const login = btnLogin
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const isEmailValido = emailRegex.test(email);
 
     console.log(email)
     if(nome == "" || email == "" || password == "" || confirm == ""){
         modal.showModal();
         msgModal.innerHTML = "Preencha todos os campos!"
-    } else if(email.indexOf("@") == -1 || email.indexOf(".") == -1 ){
+    } else if(!isEmailValido){
         modal.showModal();
         msgModal.innerHTML = "É necessário informar um e-mail válido!"
+    }else if(password.length < 6){
+        modal.showModal();
+        msgModal.innerHTML = "A senha precisa de no mínimo 6 caracteres"
     }else if(password != confirm){
         modal.showModal();
         msgModal.innerHTML = "As senhas informadas são diferentes!"
-    } else{
+    }
+    else{
         successModal.showModal();
     }
 
@@ -32,6 +39,7 @@ function Verificar(){
     }
     login.onclick = function(){
         successModal.close()
+        window.location.replace('./login.html')
     }
 
 }
