@@ -7,7 +7,8 @@ let b = document.querySelector('#b')
 let c = document.querySelector('#c')
 let d = document.querySelector('#d')
 
-let divQuestoes = document.querySelector('#questoes')
+let questionNumber = document.querySelector('#questionDiv')
+let divQuestoes = document.querySelector('#alt')
 
 let nQuestao = 0
 let pontuacao = 0
@@ -52,7 +53,7 @@ function checkAnswer(resposta) {
             nextQuestion(nQuestao)
         }
 
-    }, 200)
+    }, 300)
 
 }
 
@@ -62,7 +63,7 @@ function endGame(){
     pergunta.textContent = `Você fez ${pontuacao} pontos acertando ${acertos} de ${nQuestao} questões`
 
     divQuestoes.style.display = "none" 
-
+    questionNumber.style.display = "none" 
     setTimeout(function(){
         pontuacao = 0
         location.reload()

@@ -4,20 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./gameStyles/game.css">
 </head>
 
-<body style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-    <p id="numQuestao">1</p>
-    <p id="pergunta">Pergunta 1 - Quem venceu a Copa do mundo de 1970?</p>
+<body>
+    <div id="content">
+        <div class="questionNumber" id="questionDiv">
+            <span class="numQuestao"><span id="numQuestao">1</span></span>
+        </div>
 
-    <div id="questoes">
-        <button id="a" onclick="checkAnswer(this)"></button>
-        <button id="b" onclick="checkAnswer(this)"></button>
-        <button id="c" onclick="checkAnswer(this)"></button>
-        <button id="d" onclick="checkAnswer(this)"></button>
+        <div class="question">
+            <p id="pergunta"></p>
+            <div id="alt">
+                <button id="a" onclick="checkAnswer(this)" class="altBtn"></button>
+                <button id="b" onclick="checkAnswer(this)" class="altBtn"></button>
+                <button id="c" onclick="checkAnswer(this)" class="altBtn"></button>
+                <button id="d" onclick="checkAnswer(this)" class="altBtn"></button>
+            </div>
+        </div>
+
     </div>
-
 </body>
 
 </html>

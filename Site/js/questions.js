@@ -1,6 +1,6 @@
 const q1 = {
     numQuestao: 1,
-    pergunta: "Quem venceu a copa do mundo de 1970",
+    pergunta: "Quem venceu a copa do mundo de 1970?",
     alternativaA: "Alemanha",
     alternativaB: "Brasil",
     alternativaC: "Mexico",
@@ -9,7 +9,7 @@ const q1 = {
 }
 const q2 = {
     numQuestao: 2,
-    pergunta: "Qual time possui mais titulos da Champions League",
+    pergunta: "Qual time possui mais titulos da Champions League?",
     alternativaA: "Real Madrid",
     alternativaB: "Crisciuma",
     alternativaC: "Milan",
@@ -18,7 +18,7 @@ const q2 = {
 }
 const q3 = {
     numQuestao: 3,
-    pergunta: "Quem é o maior artilheiro da história da Champions League",
+    pergunta: "Quem é o maior artilheiro da história da Champions League?",
     alternativaA: "Henrique Dourado",
     alternativaB: "Erling Haaland",
     alternativaC: "Cristiano Ronaldo",
