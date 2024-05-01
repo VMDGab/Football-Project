@@ -39,8 +39,8 @@ body{
     position: absolute;
     width: 500px;
     height: 400px;
-    background-color: #29292965;
-    border-radius: 40px;
+    background-color: #29292990;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,8 +51,9 @@ body{
 .btn{
     width: 350px;
     height: 60px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: solid 3px #EB6C29;
+    background-color: #292929;
     font-family: "Exo 2";
     font-weight: 900;
     font-style: italic;
@@ -88,7 +89,7 @@ body{
     align-items: center;
     justify-content: space-around;
     background-color: #29292965;
-    border-radius: 20px;
+    border-radius: 10px;
     position: absolute;
 }
 
@@ -100,7 +101,7 @@ body{
     font-size: 28px;
     text-decoration: none;
     width: 45%;
-    border-radius: 20px;
+    border-radius: 10px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -113,3 +114,61 @@ body{
     background-color: #EB6C29;
 }
 
+#instrucoes{
+    width: 40%;
+    height: 40%; 
+    background-color: #F5F5F5;
+    border: solid 6px #EB6C29;
+    border-radius: 10px;
+}
+
+#instrucoes::backdrop{
+    background-color: #292929a6;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+
+    font-family: "Exo 2";
+    font-weight: 700;
+    color: #292929;
+    font-size: 20px;
+  
+}
+
+.ModalTitle{
+    font-family: "Exo 2";
+    font-weight: 900;
+    color: #EB6C29;
+    font-size: 28px;
+}
+.btnModal{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 3px #EB6C29;
+    background-color: #EB6C29;
+    font-family: "Exo 2";
+    font-weight: 900;
+    font-style: italic;
+    color: #F5F5F5;
+    font-size: 22px;
+    box-shadow: #292929 4px 6px 10px;
+    transition: all .5s ease-in-out;
+ 
+}
+
+
+
+.btnModal:active{
+    transform: scale(.9);
+}
+
+.btnModal:hover{
+    background-color: #292929;
+    color: #F5F5F5;
+}

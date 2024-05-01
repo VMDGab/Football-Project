@@ -69,3 +69,7 @@ function endGame(){
         location.reload()
     }, 3000)
 }
+
+function goHome(){
+    location.replace('./dashboard.html')
+}
