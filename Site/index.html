@@ -138,34 +138,34 @@
         </div>
     </div> 
     <div id="Lendas">
-        <img class="playerSvg" src="./src/assets/CR7.svg" data-aos="zoom-in-up" data-aos-duration="1000">
+        <img id="playerPhoto" class="playerSvg" >
         <div class="infoContainer">
-            <div class="overview" data-aos="fade-right" data-aos-duration="1500">
-                <p class="namePlayer">Cristiano Ronaldo</p>
+            <div id="overview" class="overview" data-aos="fade-right" data-aos-duration="1500">
+                <p id="playerName" class="namePlayer"></p>
 
                 <div class="clubs">
                     <p class="mainText">CLUBES ONDE ATUOU</p>
-                    <img class="playerSvg" src="./src/assets/crisClubs.svg">
+                    <img id="clubs" class="playerSvg">
                 </div>
             </div>
 
             <div class="description" data-aos="fade-left" data-aos-duration="1500">
                 <div class="NumberPosition">
-                    <span class="number">7</span>
-                    <span class="position">ATACANTE</span>
+                    <span id="number" class="number"></span>
+                    <span id="position" class="position"></span>
                 </div>
 
-                <p class="mainText">Cristiano Ronaldo dos Santos Aveiro é um futebolista português que atua como ponta-esquerda ou centroavante. Ídolo do Real Madrid, é o maior artilheiro da historia do time, da Champions League e de TODAS as seleções do mundo . É capitão pela Seleção Portuguesa, onde conquistou a Eurocopa de 2016.</p>
+                <p class="mainText" id="descricao"></p>
             </div>
         </div>
         <div class="infoFooter">
-            <button class="btnPlayer"><span>ANTERIOR</span></button>
+            <button class="btnPlayer" onclick="previouslyPlayer()">ANTERIOR</button>
             <div class="statsContainer" data-aos="fade-up" data-aos-duration="1500">
-                <div class="stats"><span class="statsText">1.197</span>JOGOS</div>
-                <div class="stats"><span class="statsText">866</span>GOLS</div>
-                <div class="stats"><span class="statsText">282</span>ASSIST</div>
+                <div id="statsJogos" class="stats"><span id="jogos" class="statsText"></span>JOGOS</div>
+                <div id="statsGols" class="stats"><span id="gols" class="statsText"></span>GOLS</div>
+                <div id="statsAssist" class="stats"><span id="assist" class="statsText"></span>ASSIST</div>
             </div>
-            <button class="btnPlayer">PRÓXIMO</button>
+            <button class="btnPlayer" onclick="nextPlayer()">PRÓXIMO</button>
         </div>
     </div>
 
@@ -179,4 +179,5 @@
 <script>
     AOS.init();
 </script>
+<script src="./js/player.js"></script>
 <script src="./js/index.js"></script>

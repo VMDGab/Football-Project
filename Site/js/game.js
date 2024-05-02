@@ -63,10 +63,11 @@ function endGame(){
 
     divQuestoes.style.display = "none" 
     questionNumber.style.display = "none" 
+    
     setTimeout(function(){
         pontuacao = 0
         location.reload()
-    }, 3000)
+    }, 5000)
 }
 
 function goHome(){

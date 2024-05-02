@@ -127,6 +127,18 @@ body{
     background-color: #292929a6;
 }
 
+@keyframes modalAnimation{
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+    
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .modal{
     display: flex;
     flex-direction: column;
@@ -138,8 +150,13 @@ body{
     font-weight: 700;
     color: #292929;
     font-size: 20px;
+   
   
 }
+dialog[open]{
+    animation: modalAnimation;
+    transition: all .5s ease forwards;
+} 
 
 .ModalTitle{
     font-family: "Exo 2";

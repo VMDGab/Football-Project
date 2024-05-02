@@ -6,7 +6,7 @@ const q1 = {
     alternativaC: "Mexico",
     alternativaD: "Itália",
     correta: "Brasil",
-    valor: 300
+    valor: 3000
 
 }
 const q2 = {
@@ -17,7 +17,7 @@ const q2 = {
     alternativaC: "Milan",
     alternativaD: "Barcelona",
     correta: "Real Madrid",
-    valor: 200
+    valor: 1000
 }
 const q3 = {
     numQuestao: 3,
@@ -27,7 +27,7 @@ const q3 = {
     alternativaC: "Cristiano Ronaldo",
     alternativaD: "Xavi",
     correta: "Cristiano Ronaldo",
-    valor: 200
+    valor: 1000
 }
 const q4 = {
     numQuestao: 4,
@@ -37,7 +37,7 @@ const q4 = {
     alternativaC: "Messi",
     alternativaD: "Adriano Gabiru",
     correta: "Adriano Gabiru",
-    valor: 500
+    valor: 3000
 }
 const q5 = {
     numQuestao: 5,
@@ -47,7 +47,7 @@ const q5 = {
     alternativaC: "Dunga",
     alternativaD: "Zola",
     correta: "Baggio",
-    valor: 500
+    valor: 5000
 }
 
 const q6 = {
@@ -58,7 +58,7 @@ const q6 = {
     alternativaC: "União Soviética",
     alternativaD: "Itália",
     correta: "Uruguai",
-    valor: 500
+    valor: 5000
 }
 const q7 = {
     numQuestao: 7,
@@ -68,7 +68,7 @@ const q7 = {
     alternativaC: "Grêmio",
     alternativaD: "Indepediente Del Valle",
     correta: "Corinthians",
-    valor: 200
+    valor: 3000
 }
 const q8 = {
     numQuestao: 8,
@@ -78,7 +78,7 @@ const q8 = {
     alternativaC: "Alemanha",
     alternativaD: "Holanda",
     correta: "Holanda",
-    valor: 300
+    valor: 3000
 }
 
 const q9 = {
@@ -89,7 +89,7 @@ const q9 = {
     alternativaC: "Messi",
     alternativaD: "De Paul",
     correta: "Mbappe",
-    valor: 300
+    valor: 3000
 }
 
 
@@ -101,7 +101,17 @@ const q10 = {
     alternativaC: "Kolo Muani",
     alternativaD: "Otamendi",
     correta: "Kolo Muani",
-    valor: 1500
+    valor: 7000
+}
+const q11 = {
+    numQuestao: 11,
+    pergunta: "Qual jogador levou uma cabeçada na final da copa do mundo de 2006?",
+    alternativaA: "Pirlo",
+    alternativaB: "Materazzi",
+    alternativaC: "Henry",
+    alternativaD: "Buffon",
+    correta: "Materazzi",
+    valor: 7000
 }
 
-const questoes = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
+const questoes = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11]

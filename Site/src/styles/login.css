@@ -285,7 +285,8 @@ box-shadow: #292929 0 6px 10px;
 
 @keyframes fadein{
     0% {
-        opacity: 0;
+        
+        
         transform: translateY(-5px);
         }
 
