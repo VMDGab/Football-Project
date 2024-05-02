@@ -13,7 +13,7 @@ const q2 = {
     numQuestao: 2,
     pergunta: "Qual time possui mais titulos da Champions League?",
     alternativaA: "Real Madrid",
-    alternativaB: "Crisciuma",
+    alternativaB: "Criciúma",
     alternativaC: "Milan",
     alternativaD: "Barcelona",
     correta: "Real Madrid",
@@ -40,7 +40,7 @@ const q4 = {
     valor: 500
 }
 const q5 = {
-    numQuestao: 4,
+    numQuestao: 5,
     pergunta: "Quem perdeu o penalti decicivo na disputa de penaltis da final da copa de 1994?",
     alternativaA: "Bebeto",
     alternativaB: "Baggio",
@@ -50,5 +50,58 @@ const q5 = {
     valor: 500
 }
 
+const q6 = {
+    numQuestao: 6,
+    pergunta: "Qual seleção venceu a primeira Copa do mundo em 1930?",
+    alternativaA: "Hungria",
+    alternativaB: "Uruguai",
+    alternativaC: "União Soviética",
+    alternativaD: "Itália",
+    correta: "Uruguai",
+    valor: 500
+}
+const q7 = {
+    numQuestao: 7,
+    pergunta: "Qual o último time não europeu a vencer o mundial de clubes FIFA?",
+    alternativaA: "Corinthians",
+    alternativaB: "River Plate",
+    alternativaC: "Grêmio",
+    alternativaD: "Indepediente Del Valle",
+    correta: "Corinthians",
+    valor: 200
+}
+const q8 = {
+    numQuestao: 8,
+    pergunta: "Qual seleção ficou conhecida como 'Laranja mecânica' pela sua forma de jogar na copa de 1974?",
+    alternativaA: "Turquia",
+    alternativaB: "Argentina",
+    alternativaC: "Alemanha",
+    alternativaD: "Holanda",
+    correta: "Holanda",
+    valor: 300
+}
 
-const questoes = [q1, q2, q3, q4, q5]
+const q9 = {
+    numQuestao: 9,
+    pergunta: "Na final da copa do mundo de 2022, um jogador fez 3 gols na partida, quem é esse jogador?",
+    alternativaA: "Di Maria",
+    alternativaB: "Mbappe",
+    alternativaC: "Messi",
+    alternativaD: "De Paul",
+    correta: "Mbappe",
+    valor: 300
+}
+
+
+const q10 = {
+    numQuestao: 10,
+    pergunta: "No último lance da prorrogação da copa do mundo de 2022, um jogador perdeu um gol cara a cara com o goleiro, quem é esse jogador?",
+    alternativaA: "Mac Allister",
+    alternativaB: "Dembelé",
+    alternativaC: "Kolo Muani",
+    alternativaD: "Otamendi",
+    correta: "Kolo Muani",
+    valor: 1500
+}
+
+const questoes = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
