@@ -79,6 +79,7 @@ body{
     background-color: #eb6d2972;
     color: #F5F5F5;
     transition: all .5s ease-in-out;
+    cursor: pointer;
 }
 
 .altBtn:hover{
@@ -101,6 +102,7 @@ body{
    border-radius: 50px;
    text-align: center;
    transition: all .5s ease-in-out;
+   cursor: pointer;
    }
 
    .homeIcon:hover{

@@ -203,12 +203,11 @@ body::-webkit-scrollbar-thumb {
 
 #Historia {
     width: 100%;
-   
     padding-top: 100px;
 }
 
 .content {
-    padding: 60px 150px;
+    padding: 0px 150px;
 }
 
 .right {
@@ -267,6 +266,8 @@ body::-webkit-scrollbar-thumb {
 
 .brasil {
     background: linear-gradient(180deg, #fff 1%, #ffd100 100%);
+    height: 100%;
+    padding-bottom: 60px;
 }
 
 .pele {
@@ -275,10 +276,12 @@ body::-webkit-scrollbar-thumb {
 
 .cruyff {
     background: linear-gradient(180deg, #00529F 50%, #A2214B 80%);
+    padding-top: 30px;
 }
 
 .johan {
-    height: 400px;
+    height: 500px;
+   
 }
 
 .btn {
@@ -366,15 +369,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 .overview{
-    width: 400px;
+    width: 500px;
    }
 
 .description{
-    width: 400px;
+    width: 450px;
 }
 .playerSvg{
     position: absolute;
     z-index: 1;
+    padding-right: 100px;
+    transition: all .4s ease-in-out;
+
 }
 
 .namePlayer{
@@ -401,7 +407,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: 600;
     font-size: 40px;
     font-style: italic;
-   text-transform: uppercase;
+     text-transform: uppercase;
 }
 
 .infoFooter{
@@ -454,12 +460,9 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
     z-index: 2;
     transition: all .4s ease-in-out;
+    cursor: pointer;
 }
 
-
-.btnPlayer:hover{
-    background: linear-gradient(144deg,#8F2626, #E96A27);
-}
 
 .btnPlayer:active{
     transform: scale(0.9);

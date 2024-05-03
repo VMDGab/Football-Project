@@ -33,6 +33,7 @@ body {
 
 .goBack {
     margin-right: 6%;
+    cursor: pointer;
 }
 
 .btn {
@@ -130,11 +131,13 @@ body {
     font-weight: 600;
     font-size: 24px;
     color: #f5f5f5;
+
 }
 
 .login {
     color: #ff7429;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .form {
@@ -187,6 +190,7 @@ body {
     text-decoration: none;
     position: relative;
     margin-top: 26px;
+    cursor: pointer;
 }
 
 .signUpBtn::before {
@@ -261,6 +265,7 @@ box-shadow: #292929 0 6px 10px;
     justify-content: center;
     text-decoration: none;
     margin-top: 6%;    
+    cursor: pointer;
 }
 
 

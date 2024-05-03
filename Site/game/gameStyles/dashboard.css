@@ -63,6 +63,7 @@ body{
     box-shadow: #292929 4px 6px 10px;
     transition: all .5s ease-in-out;
     position: relative;
+    cursor: pointer;
 }
 
 
@@ -177,7 +178,7 @@ dialog[open]{
     font-size: 22px;
     box-shadow: #292929 4px 6px 10px;
     transition: all .5s ease-in-out;
- 
+    cursor: pointer;
 }
 
 
@@ -193,6 +194,7 @@ dialog[open]{
 
 .logout{
     transition: all .5s ease-in-out;
+    cursor: pointer;
 }
 .logout:active{
     transform: scale(.9);

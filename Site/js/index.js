@@ -11,6 +11,9 @@ let Lendas = document.querySelector("#Lendas")
 let statsJogos = document.querySelector("#statsJogos")
 let statsGols = document.querySelector("#statsGols")
 let statsAssist = document.querySelector("#statsAssist")
+let overview = document.querySelector("#overview")
+let desc = document.querySelector("#desc")
+let stats = document.querySelector("#stats")
 
 let nPlayer = 0
 
@@ -24,9 +27,9 @@ position.textContent = players[nPlayer].posicao
 playerName.style.color = players[nPlayer].cor
 number.style.color = players[nPlayer].cor
 position.style.color = players[nPlayer].cor
-statsJogos.style.borderColor = players[nPlayer].bg
-statsGols.style.borderColor = players[nPlayer].bg
-statsAssist.style.borderColor = players[nPlayer].bg
+statsJogos.style.borderColor = players[nPlayer].stat
+statsGols.style.borderColor = players[nPlayer].stat
+statsAssist.style.borderColor = players[nPlayer].stat
 
 jogos.style.color = players[nPlayer].bg
 gols.style.color = players[nPlayer].bg
@@ -41,7 +44,7 @@ Lendas.style.background = players[nPlayer].bg
 
 function nextPlayer() {
     nPlayer = nPlayer + 1
-
+    animate(playerPhoto)
     setTimeout(function () {
 
         playerPhoto.setAttribute("src", players[nPlayer].photo)
@@ -61,22 +64,22 @@ function nextPlayer() {
         assist.textContent = players[nPlayer].assist
 
         Lendas.style.background = players[nPlayer].bg
-        statsJogos.style.borderColor = players[nPlayer].bg
-        statsGols.style.borderColor = players[nPlayer].bg
-        statsAssist.style.borderColor = players[nPlayer].bg
+        statsJogos.style.borderColor = players[nPlayer].stat
+        statsGols.style.borderColor = players[nPlayer].stat
+        statsAssist.style.borderColor = players[nPlayer].stat
 
         jogos.style.color = players[nPlayer].bg
         gols.style.color = players[nPlayer].bg
         assist.style.color = players[nPlayer].bg
 
 
-    }, 100)
+    }, 500)
 
 }
 
-function previouslyPlayer(){
+function previouslyPlayer() {
     nPlayer = nPlayer - 1
-
+    animate()
     setTimeout(function () {
 
         playerPhoto.setAttribute("src", players[nPlayer].photo)
@@ -96,18 +99,33 @@ function previouslyPlayer(){
         assist.textContent = players[nPlayer].assist
 
         Lendas.style.background = players[nPlayer].bg
-        statsJogos.style.borderColor = players[nPlayer].bg
-        statsGols.style.borderColor = players[nPlayer].bg
-        statsAssist.style.borderColor = players[nPlayer].bg
+        statsJogos.style.borderColor = players[nPlayer].stat
+        statsGols.style.borderColor = players[nPlayer].stat
+        statsAssist.style.borderColor = players[nPlayer].stat
 
         jogos.style.color = players[nPlayer].bg
         gols.style.color = players[nPlayer].bg
         assist.style.color = players[nPlayer].bg
 
 
-    }, 100)
+    }, 500)
 }
 
 function changeNav() {
     nav.classList.toggle('active', scrollY > 0)
 }
+
+function animate() {
+    playerPhoto.style.transform = "translateX(-1000px)"
+    overview.style.transform = "translateX(-1000px)"
+    desc.style.transform = "translateX(-3000px)"
+    stats.style.transform = "translateY(1000px)"
+
+    setTimeout(function () {
+        playerPhoto.style.transform = "translateX(0px)"
+        overview.style.transform = "translateX(0px)"
+        desc.style.transform = "translateX(0px)"
+        stats.style.transform = "translateY(0px)"
+    }, 500)
+
+ }
