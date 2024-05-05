@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+   
+   }
+
+   #content{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.500) 35%, rgba(41, 41, 41, 0.500) 100%), url(../../assets/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+.questionNumber{
+    width: 200px;
+    height: 100px;
+    background-color: #EB6C29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 70px;
+    color: #F5F5F5;
+    border-radius: 10px;
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-bottom: -4%;
+    z-index: 1;
+    box-shadow: #595959 0 6px 10px;
+
+}
+
+.question{
+    height: 80%;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #292929b0;
+    justify-content: center;
+}
+
+#pergunta{
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 40px;
+    color: #F5F5F5;
+    margin-top: 5%;
+    text-align: center;
+    width: 70%;
+}
+
+#alt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+}
+
+.altBtn{
+    width: 400px;
+    height: 60px;
+
+    border-radius: 10px;
+    border: #EB6C29 4px solid;
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 26px;
+    background-color: #eb6d2972;
+    color: #F5F5F5;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.altBtn:hover{
+    background-color: #EB6C29;
+    color: #F5F5F5;
+}
+
+.altBtn:active{
+    transform: scale(.9);
+}
+.homeIcon{
+    color: #F5F5F5;
+    align-self: flex-end;
+    margin-right: 10%;
+    margin-bottom: -2%; 
+    z-index: 1;
+   border: 6px solid #eb6d29b3;
+   height: 70px;
+   width: 70px;
+   border-radius: 50px;
+   text-align: center;
+   transition: all .5s ease-in-out;
+   cursor: pointer;
+   }
+
+   .homeIcon:hover{
+    transform: scale(.9);
+   }

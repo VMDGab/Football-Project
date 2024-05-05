@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./assets/Logo.png">
+    <title>Futebol</title>
+</head>
+
+<body onscroll="changeNav()">
+   
+    <div id="Inicio">
+        <nav id="nav" class="navbar">
+            <a href="#Inicio"><img src="./assets/Logo.png" class="logo"></a>
+
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="#Historia" class="nav-links">A história
+                    </a></li>
+                <li class="nav-list-item"><a href="#Lendas" class="nav-links">As Lendas</a>
+                </li>
+                <li class="nav-list-item"><a href="#Inicio" class="nav-links">Desenvolvedor</a></li>
+                <li class="nav-list-item"><a href="#Quiz" class="nav-links">Quiz</a></li>
+            </ul>
+            <a href="./cadastro.html" style="text-decoration: none;">
+            <button class="btn">
+                <span class="spanBtn">CADASTRE-SE</span>
+                <svg class="svg" width="15px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+            </button>
+        </a>
+        </nav>
+
+        <div class="presentation">
+            <p class="Welcome">Olá, Seja bem-vindo!</p>
+            <p class="text">
+                Seja um amante da bola ou apenas alguém com <br>
+                curiosidade, aqui você pode aprender um pouco mais <br>
+                sobre o maior esporte do mundo, desde sua origem, <br>
+                suas grandes historias e seus maiores jogadores.
+            </p>
+        </div>
+
+        <div class="btnContainer">
+            <a href="#Historia" class="mainButton">Saiba Mais!</a>
+        </div>
+    </div>
+    <div id="Historia">
+        <div class="content">
+            <p class="Title">A Origem</p>
+            <div class="capitulo" id="origem">
+                <img class="images" data-aos="zoom-in-right" src="./assets/China.jpg">
+                <p class="mainText" data-aos="fade-right">Quase todas as culturas do mundo possuem alguma referência ao
+                    <span class="red">futebol.</span><br>
+                    Chineses, japoneses, italianos, gregos antigos, persas, vikings e muitos <br>
+                    outros povos já jogavam algum tipo de jogo de bola em tempos muitos distantes. <br>
+                    Porém, foi na <span class="red">Inglaterra</span> que o futebol realmente começou a tomar forma.
+                    <br>
+                    Tudo começou em 1863, quando duas associações de jogos de bola se <br>
+                    separaram, porque os partidários do "rugby" não aceitavam um jogo em que <br>
+                    era proibido segurar a bola com as mãos. E isso acabou dando origem à <br>
+                    <span class="red">The English Football Association</span>, primeira associação inglesa de futebol.
+                </p>
+            </div>
+        </div>
+
+        <div class="content right">
+            <p class="Title">A Copa do mundo</p>
+            <div class="capitulo" id="CopaDoMundo">
+                <p class="mainText" data-aos="fade-left">A história da Copa do Mundo de futebol começa em 1928 quando o
+                    <br>
+                    francês <span class="red">Jules Rimet</span> assume o comando da Federação Internacional de <br>
+                    Futebol (FIFA) e começa a organizar a primeira competição de futebol mundial.<br>
+                    A estreia do evento aconteceu em 1930 no Uruguai e contou com a <br>
+                    participação de 13 seleções convidadas. Argentina, Bélgica, Brasil, <br>
+                    Bolívia, Chile, Estados Unidos, França, Iugoslávia, México, Paraguai, <br>
+                    Peru, Romênia, Uruguai.
+
+                </p>
+                <img class="images" data-aos="zoom-in-left" src="./assets/uruguai1930.jpg   ">
+            </div>
+        </div>
+
+        <div class="content brasil">
+            <p class="Title green">O REI!</p>
+            <div class="capitulo" id="pele">
+                <img class="pele" data-aos="zoom-in-right" src="./assets/pele.svg">
+                <p class="mainText" data-aos="fade-right">A história do maior jogador de futebol do mundo começou a ser
+                    <br>
+                    construída na Suécia, em 1958, quando o rei, aos 17 anos, <br>
+                    conquistou a primeira de suas três Copas - um feito que, até hoje, <br>
+                    nenhum outro jogador alcançou. Pelé ajudou a construir a <br>
+                    identidade nacional brasileira. Ele apresentou o que a cultura de <br>
+                    rua; o que um pé descalço é capaz de aprender. O Império brasileiro <br>
+                    a partir do seu monarca mudou o jogo que surgiu na Inglaterra.
+                </p>
+            </div>
+            <br>
+            <br>
+            <div class="capitulo" id="Brasil">
+                <p class="mainText" data-aos="fade-left">Após 58, o Brasil se tornou referência mundial no futebol, <br>
+                    ganhando 3 títulos entre 58 e 70, porém após isso, a seleção ficou <br>
+                    24 anos de jejum, tendo grandes seleções durante o periodo, <br>
+                    como a seleção de 82 liderada por Zico, Sócrates e Falcão. <br>
+                    Mas foi apenas em 1994 que o Brasil voltou a vencer, liderada por <br>
+                    Romário e Bebeto. O penta campeonato veio pouco depois, após a <br>
+                    derrota na final de 98, o Brasil superou a Alemanha na final de <br>
+                    2002, com 2 gols de Ronaldo Fenômeno na final.
+                </p>
+                <img class="images" data-aos="zoom-in-left" src="./assets/ronaldo.jpeg">
+            </div>
+        </div>
+        <div class="content cruyff">
+            <p class="Title white">A revolução tática</p>
+            <div class="capitulo">
+                <p class="mainText white" data-aos="fade-up-right">Se você já ouviu a expressão “futebol moderno” para
+                    explicar o jogo de equipes
+                    como Barcelona,
+                    Bayern e Tottenham, sabe de onde vem as influências e ideias que moldaram o esporte praticado há
+                    anos.
+                    Pense na Lei do Impedimento e o Arsenal de Herbert Chapman. A Hungria de Puskas.
+                    O Brasil de Pelé, Zagallo e a invenção do 4-3-3. A Inglaterra campeã em 1966.
+                    De lá pra cá, todas as mudanças e revoluções do futebol começam e terminam em um nome: Johan Cruyff.
+                    Era a concepção de ideia que mudou profundamente o jogo: linhas avançadas, intensidade e marcação
+                    por
+                    pressão para não dar tempo e espaço ao adversário. Com a bola, troca de passes, inversão de posições
+                    e mentalidade ofensiva. Junto com o mentor Rinus Michels, a Holanda de 1974 chocou o mundo.
+                    No Barcelona, Cruyff ajudou a acabar com o jejum de títulos, coroado com um 5x0 no Real Madrid,
+                    e formou as bases da filosofia blaugrana: jogar bem acima do resultado. Não deixar de atacar como
+                    forma de respeito ao jogo e ao adversário. Coletivo, valorizando a inteligência e o passe.
+                </p>
+                <img class="johan" data-aos="fade-left" src="./assets/johan.png">
+            </div>
+        </div>
+    </div> 
+    <div id="Lendas">
+        <img id="playerPhoto" class="playerSvg" >
+        <div class="infoContainer">
+            <div id="overview" class="overview" data-aos="fade-right" data-aos-duration="1500">
+                <p id="playerName" class="namePlayer"></p>
+
+                <div class="clubs">
+                    <p class="mainText">CLUBES ONDE ATUOU</p>
+                    <img id="clubs" class="playerSvg">
+                </div>
+            </div>
+
+            <div id="desc" class="description" data-aos="fade-left" data-aos-duration="1500">
+                <div class="NumberPosition">
+                    <span id="number" class="number"></span>
+                    <span id="position" class="position"></span>
+                </div>
+
+                <p class="mainText" id="descricao"></p>
+            </div>
+        </div>
+        <div class="infoFooter">
+            <button class="btnPlayer" onclick="previouslyPlayer()">ANTERIOR</button>
+            <div id="stats" class="statsContainer" data-aos="fade-up" data-aos-duration="1500">
+                <div id="statsJogos" class="stats"><span id="jogos" class="statsText"></span>JOGOS</div>
+                <div id="statsGols" class="stats"><span id="gols" class="statsText"></span>GOLS</div>
+                <div id="statsAssist" class="stats"><span id="assist" class="statsText"></span>ASSIST</div>
+            </div>
+            <button class="btnPlayer" onclick="nextPlayer()">PRÓXIMO</button>
+        </div>
+    </div>
+
+    
+
+</body>
+
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="./js/player.js"></script>
+<script src="./js/index.js"></script>

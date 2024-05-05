@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../css/game.css">
+</head>
+
+<body>
+    <div id="content">
+        <div class="questionNumber" id="questionDiv">
+            <span class="numQuestao"><span id="numQuestao">1</span></span>
+        </div>
+
+        <i class="fa-solid fa-house fa-4x homeIcon" onclick="goHome()"></i> 
+        <div class="question">
+            <p id="pergunta"></p>
+            <div id="alt">
+                <button id="a" onclick="checkAnswer(this)" class="altBtn"></button>
+                <button id="b" onclick="checkAnswer(this)" class="altBtn"></button>
+                <button id="c" onclick="checkAnswer(this)" class="altBtn"></button>
+                <button id="d" onclick="checkAnswer(this)" class="altBtn"></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="../js/questions.js"></script>
+<script src="../js/game.js"></script>
+
+<script src="https://kit.fontawesome.com/77b47374b3.js" crossorigin="anonymous"></script>

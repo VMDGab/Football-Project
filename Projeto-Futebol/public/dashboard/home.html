@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Quiz</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div id="content">
+
+    <div class="menu">
+        <img src="../assets/Logo.png" class="logo">
+
+        <div class="menuOptions">
+            <a href="./dashboard.html" class="option">Game</a>
+            <a href="./ranking.html" class="option">Ranking</a>
+        </div>
+
+        <i class="fa-solid fa-right-from-bracket fa-2xl logout" style="color: #f5f5f5;" onclick="logout()"></i>
+       </div>
+    <div class="content">
+        <div class="options">
+            <a href="../dashboard/game.html">
+            <button class="btn">Jogar</button>
+            </a>
+            <button class="btn" onclick="openModal()">Instruções</button>
+            <a href="../index.html">
+                <button class="btn">Site</button>
+            </a>
+        </div>
+    </div> 
+
+    <dialog id="instrucoes">
+        <div class="modal">
+            <span class="ModalTitle">Instruções</span>
+            <p>
+                Bem-vindo ao nosso quiz de futebol! Teste seus conhecimentos sobre o esporte
+                mais popular do mundo. Você receberá uma série de perguntas relacionadas ao futebol.
+                Escolha a opção que acredita ser a correta e vamos ver quantos pontos você consegue
+                marcar. Boa sorte e divirta-se!
+            </p>
+
+            <button class="btnModal" onclick="closeModal()">OK</button>
+        </div>
+        
+    </dialog>
+ </div>
+</body>
+</html>
+<script src="https://kit.fontawesome.com/77b47374b3.js" crossorigin="anonymous"></script>
+
+<script src="../js/home.js"></script>

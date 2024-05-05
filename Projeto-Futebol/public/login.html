@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Login</title>
+    <link rel="icon" href="./css/Logo.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="content">
+        <div class="header">
+            <img src="./assets/Logo.png" class="logo">
+            <a href="./index.html" style="text-decoration: none; margin-right: 6%;">
+                <button class="btn">
+                    <span class="spanBtn">VOLTAR AO SITE</span>
+                    <svg class="svg" width="15px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </a>
+        </div>
+
+        <div class="SignIn" data-aos="fade-up" data-aos-duration="1200">
+            <div class="signInContent">
+                <span class="signInTitle">Faça seu login!</span>
+
+                <div class="form">
+
+                    <div class="inputDiv">
+                        <span class="inputTitle">E-mail</span>
+                        <input class="input" id="inputEmail" placeholder="E-mail">
+                    </div>
+
+                    <div class="inputDiv">
+                        <span class="inputTitle">Senha</span>
+                        <input class="input" id="inputSenha" placeholder="******" type="password">
+                    </div>
+
+
+                    <button class="signInBtn" onclick="Verificar()">Entrar!</button>
+                </div>
+
+                <span class="SignUp">Não possui uma conta? <a href="./cadastro.html"
+                        class="cadastro">Cadastre-se</a></span>
+            </div>
+
+        </div>
+
+        <dialog id="error" class="modal" data-aos="fade-up">
+            <div class="dialog">
+                <p class="ErrorModal">Erro ao realizar login!</p>
+
+                <p id="msg"></p>
+
+                <button id="btnClose" class="btnModal">OK</button>
+            </div>
+
+        </dialog>
+    </div>
+</body>
+
+</html>
+
+<script src="./js/login.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
