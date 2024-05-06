@@ -30,7 +30,6 @@ app.use("/usuarios", usuarioRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`
-    Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar .: http://${HOST_APP}:${PORTA_APP} \n\n
-    Deus é bom e o felipe melo é arrombado
-   `)
+    Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar .: http://${HOST_APP}:${PORTA_APP}
+    `)
 });

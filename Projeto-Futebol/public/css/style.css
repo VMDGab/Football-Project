@@ -389,7 +389,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 64px;
     font-style: normal; 
     margin: 0;
-   
+    width: 50px;
 }
 .NumberPosition{
     display: flex;
@@ -443,8 +443,7 @@ body::-webkit-scrollbar-thumb {
 
 }
 .statsText{
-    color: #ffd100;
-    margin-right: 5px;
+     margin-right: 5px;
 }
 
 .btnPlayer{

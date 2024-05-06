@@ -51,7 +51,7 @@ const p1 = {
             numero: 10,
             posicao: "meia atacante",
             descricao: "Lionel Andrés Messi Cuccittini é um jogador argentino que atua como meia atacante. Atualmente joga pelo Inter Miami e pela Seleção Argentina, onde venceu a Copa do Mundo do Catar de 2022. Ele possui um recorde de oito premiações da Bolas de Ouro, um recorde de seis Chuteiras de Ouro, é o jogador com mais títulos oficiais na história do futebol com 44 títulos.",
-            bg: "linear-gradient(180deg, #00529F 50%, #A2214B 65%)",
+            bg: "linear-gradient(180deg, #3D6DB4 0%, #1A2F4E 100%)",
             stat: "#A2214B",
             cor: "#EF002F",
             jogos: 1089,
@@ -59,4 +59,47 @@ const p1 = {
             assist: 350
             }
 
-   const players = [p1, p2, p3, p4]
+            const p5 = {
+               nome: "Zinédine Zidane",
+               clube: "./assets/playersClubs/zidaneclubs.svg",
+               photo: "./assets/players/zidane.svg",
+               numero: 10,
+               posicao: "meia",
+               descricao: "Zinédine Zidane é uma lenda do futebol francês, conhecido por sua elegância em campo e habilidades técnicas excepcionais. Como jogador, ele brilhou em clubes como Bordeaux, Juventus e Real Madrid, conquistando a Copa do Mundo de 1998 e a Euro 2000 com a seleção francesa. Como treinador, liderou o Real Madrid a três títulos consecutivos da Liga dos Campeões da UEFA em 2016, 2017 e 2018.",
+               bg: "linear-gradient(180deg, #DADCE8 0%, #AFB0B6 100%)",
+               stat: "#AFB0B6",
+               cor: "#EF002F",
+               jogos: 689,
+               gols: 126,
+               assist: 141
+               } 
+               const p6 = {
+                  nome: "Diego Maradona",
+                  clube: "./assets/playersClubs/maradonaclubs.svg",
+                  photo: "./assets/players/maradona.svg",
+                  numero: 10,
+                  posicao: "meia",
+                  descricao: "Diego Maradona foi um dos maiores jogadores de futebol da história, conhecido por sua genialidade em campo e por liderar a Argentina à vitória na Copa do Mundo de 1986. Sua carreira inclui passagens por clubes como Boca Juniors, Barcelona e Napoli, onde se tornou uma lenda. Apesar de seus altos e baixos pessoais, seu legado como um dos maiores talentos do futebol permanece incontestável. ",
+                  bg: "linear-gradient(180deg, #75BFE3 0%, #3F6E85 100%)",
+                  stat: "#75BFE3",
+                  cor: "#FFFFFF",
+                  jogos: 589,
+                  gols: 311,
+                  assist: 103
+                  } 
+                  const p7 = {
+                     nome: "Ronaldinho Gaúcho",
+                     clube: "./assets/playersClubs/r10clubs.svg",
+                     photo: "./assets/players/r10.svg",
+                     numero: 10,
+                     posicao: "Ponta Esquerda",
+                     descricao: "Conhecido por sua habilidade excepcional, dribles brilhantes e personalidade cativante, ele encantou fãs ao redor do mundo durante sua carreira. Com passagens marcantes pelo Barcelona e pela seleção brasileira, ele conquistou inúmeros títulos e prêmios individuais, incluindo a Copa do Mundo de 2002. ",
+                     bg: "linear-gradient(180deg, #3D6DB4 0%, #1A2F4E 100%)",
+                     stat: "#A2214B",
+                     cor: "#EF002F",
+                     jogos: 547,
+                     gols: 197,
+                     assist: 167
+                     } 
+
+   const players = [p1, p2, p3, p4, p5, p6, p7]

@@ -31,9 +31,9 @@ statsJogos.style.borderColor = players[nPlayer].stat
 statsGols.style.borderColor = players[nPlayer].stat
 statsAssist.style.borderColor = players[nPlayer].stat
 
-jogos.style.color = players[nPlayer].bg
-gols.style.color = players[nPlayer].bg
-assist.style.color = players[nPlayer].bg
+jogos.style.color = players[nPlayer].stat
+gols.style.color = players[nPlayer].stat
+assist.style.color = players[nPlayer].stat
 
 descricao.textContent = players[nPlayer].descricao
 jogos.textContent = players[nPlayer].jogos
@@ -68,9 +68,9 @@ function nextPlayer() {
         statsGols.style.borderColor = players[nPlayer].stat
         statsAssist.style.borderColor = players[nPlayer].stat
 
-        jogos.style.color = players[nPlayer].bg
-        gols.style.color = players[nPlayer].bg
-        assist.style.color = players[nPlayer].bg
+        jogos.style.color = players[nPlayer].stat
+        gols.style.color = players[nPlayer].stat
+        assist.style.color = players[nPlayer].stat
 
 
     }, 500)
@@ -102,10 +102,10 @@ function previouslyPlayer() {
         statsJogos.style.borderColor = players[nPlayer].stat
         statsGols.style.borderColor = players[nPlayer].stat
         statsAssist.style.borderColor = players[nPlayer].stat
-
-        jogos.style.color = players[nPlayer].bg
-        gols.style.color = players[nPlayer].bg
-        assist.style.color = players[nPlayer].bg
+        
+        jogos.style.color = players[nPlayer].stat
+        gols.style.color = players[nPlayer].stat
+        assist.style.color = players[nPlayer].stat
 
 
     }, 500)
