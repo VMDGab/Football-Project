@@ -190,8 +190,10 @@ body{
 
 .positionPlayer{
     display: flex;
-    justify-content: space-between;
     width: 120px;
+}
+.position{
+    margin-right: 10px;
 }
 
 .points{

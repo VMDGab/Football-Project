@@ -27,7 +27,7 @@ function buscarPontuacaoUsuario(fkUsuario) {
 function buscarRanking() {
 
     var instrucaoSql = `select usuario.nomeUsuario, pontuacao.pontuacao 
-    from usuario join pontuacao on pontuacao.fkUsuario = usuario.idUsuario`;
+    from usuario join pontuacao on pontuacao.fkUsuario = usuario.idUsuario order by pontuacao.pontuacao desc`;
 
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);

@@ -15,7 +15,7 @@ router.get(`/buscarPontuacaoUsuario/:idUsuario`, function (req, res) {
     pontuacaoController.buscarPontuacaoUsuario(req, res);
 })
 
-router.get(`/buscarRanking/:idUsuario`, function (req, res) {
+router.get(`/buscarRanking/`, function (req, res) {
     pontuacaoController.buscarRanking(req, res);
 })
 
