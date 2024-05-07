@@ -65,3 +65,13 @@ insert into alternativa values
 (default, "Erling Haaland", 3),
 (default, "Cristiano Ronaldo", 3),
 (default, "Xavi", 3);
+
+select * from pontuacao;
+
+insert into pontuacao (pontuacao, fkUsuario) values(
+10000, 2
+);
+truncate pontuacao;
+
+select usuario.nomeUsuario, pontuacao.pontuacao 
+    from usuario join pontuacao on pontuacao.fkUsuario = usuario.idUsuario

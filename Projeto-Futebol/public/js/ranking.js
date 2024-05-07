@@ -26,3 +26,13 @@ const pieChart = new Chart(
     config,
  
 );
+
+window.addEventListener('load', () => {
+    if(sessionStorage.length == 0){
+        location.replace('../login.html')
+    }
+})
+function logout(){
+    sessionStorage.clear()
+    location.replace('../login.html')
+    }

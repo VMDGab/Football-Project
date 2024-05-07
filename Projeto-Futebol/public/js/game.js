@@ -1,3 +1,5 @@
+const idUsuario = sessionStorage.ID_USUARIO
+console.log(idUsuario)
 
 let numQuestao = document.querySelector('#numQuestao')
 let pergunta = document.querySelector('#pergunta')
@@ -11,7 +13,7 @@ let questionNumber = document.querySelector('#questionDiv')
 let divQuestoes = document.querySelector('#alt')
 
 let nQuestao = 0
-let pontuacao = 0
+let pontuacaoUsuario = 0
 let acertos = 0
 
 
@@ -41,7 +43,7 @@ function checkAnswer(resposta) {
     let respostaCorreta = questoes[nQuestao].correta
 
     if (respostaUsuario == respostaCorreta) {
-        pontuacao += questoes[nQuestao].valor
+        pontuacaoUsuario += questoes[nQuestao].valor
         acertos += 1
     }
     
@@ -61,14 +63,25 @@ function checkAnswer(resposta) {
 function endGame(){
     numQuestao.textContent = "FIM DE JOGO"
 
-    pergunta.textContent = `Você fez ${pontuacao} pontos acertando ${acertos} de ${nQuestao} questões`
+    pergunta.textContent = `Você fez ${pontuacaoUsuario} pontos acertando ${acertos} de ${nQuestao} questões`
+
+    fetch(`/pontuacao/inserirPontuacao/${idUsuario}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            pontuacao: pontuacaoUsuario
+           })
+    }).catch(function (erro) {
+        console.log(erro);
+    })
 
     divQuestoes.style.display = "none" 
     questionNumber.style.display = "none" 
     
     setTimeout(function(){
-        pontuacao = 0
-        location.reload()
+       location.replace("../dashboard/ranking.html")
     }, 5000)
 }
 
@@ -81,3 +94,4 @@ window.addEventListener('load', () => {
         location.replace('../login.html')
     }
 })
+

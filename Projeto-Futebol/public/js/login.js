@@ -34,7 +34,7 @@ function Verificar() {
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nomeUsuario;
                     sessionStorage.ID_USUARIO = json.idUsuario;
-                
+                               
                     setTimeout(function () {
                         window.location.replace('../dashboard/home.html')
                     }, 1000); 
