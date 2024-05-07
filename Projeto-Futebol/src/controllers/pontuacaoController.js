@@ -52,10 +52,11 @@ function buscarPontuacaoUsuario(req, res) {
     );
 }
 
-function buscarRanking() {
+function buscarRanking(req, res) {
  
-    pontuacaoModel.buscarRanking()
-    .catch(
+    pontuacaoModel.buscarRanking().then(rankingRes => {
+        res.status(200).json(rankingRes);
+        }).catch(
         function (erro) {
             console.log(erro);
             res.status(500).json(erro.sqlMessage);

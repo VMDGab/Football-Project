@@ -50,19 +50,21 @@ fetch(`/pontuacao/buscarPontuacaoUsuario/${idUsuario}`).then(res => {
         console.log(erro);
     })
 
-    fetch(`/pontuacao/buscarRanking/`).then(
-        res => { console.log(res)
-        //     res.json().then(res => {
-        //     ranking.innerHTML += `
-        //     <div class="player">
-        //     <div class="positionPlayer">
-        //         <span class="position">1°</span>
-        //         <span class="namePlayer">${res[0].nomeUsuario}</span>
-        //     </div>
-        //     <span class="points">${res[0].pontuacao}</span>
-        // </div>`
-        // })
-    }).catch(function (erro) {
-            console.log(erro);
+fetch(`/pontuacao/buscarRanking/`).then(
+    res => {
+        res.json().then(res => {
+            for (i = 0; i <= res.length; i++) {
+                ranking.innerHTML += `
+                <div class="player">
+                <div class="positionPlayer">
+                    <span class="position">${i + 1}°</span>
+                    <span class="namePlayer">${res[i].nomeUsuario}</span>
+                </div>
+                <span class="points">${res[i].pontuacao}</span>
+                </div>`
+            }
         })
+    }).catch(function (erro) {
+        console.log(erro);
+    })
 

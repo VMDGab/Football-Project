@@ -190,7 +190,7 @@ body{
 
 .positionPlayer{
     display: flex;
-    width: 120px;
+    width: 100%;
 }
 .position{
     margin-right: 10px;
