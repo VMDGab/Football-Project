@@ -1,16 +1,16 @@
 var database = require("../database/config");
 
-function inserirPontuacao(pontuacao, fkUsuario) {
+function inserirPontuacao(pontuacao, fkUsuario, time) {
 
-    var instrucaoSql = `insert into pontuacao (pontuacao, fkUsuario) values('${pontuacao}', '${fkUsuario}');`;
+    var instrucaoSql = `insert into pontuacao (pontuacao, fkUsuario, tempoDecorrido) values('${pontuacao}', '${fkUsuario}', '${time}');`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
 
-function atualizarPontuacao(pontuacao, fkUsuario) {
+function atualizarPontuacao(pontuacao, fkUsuario, time) {
 
-    var instrucaoSql = `update pontuacao set pontuacao = ${pontuacao} where fkUsuario = ${fkUsuario};`;
+    var instrucaoSql = `update pontuacao set pontuacao = ${pontuacao},tempoDecorrido = '${time}' where fkUsuario = ${fkUsuario};`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -18,7 +18,7 @@ function atualizarPontuacao(pontuacao, fkUsuario) {
 
 function buscarPontuacaoUsuario(fkUsuario) {
 
-    var instrucaoSql = `select pontuacao from pontuacao where fkUsuario = ${fkUsuario}`;
+    var instrucaoSql = `select pontuacao, tempoDecorrido from pontuacao where fkUsuario = ${fkUsuario}`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

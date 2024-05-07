@@ -16,6 +16,32 @@ let pontuacaoUsuario = 0
 let acertos = 0
 
 
+let seconds = 0
+let minutes = 0
+let time = ''
+
+
+const timer = setInterval(() => {
+    seconds++
+    if(seconds >= 59){
+        minutes++
+        seconds = seconds - 60
+    }
+
+    if(minutes < 10 && seconds < 10){
+    time = `00:0${minutes}:0${seconds}`
+}else if(minutes < 10){
+    time = `00:0${minutes}:${seconds}`
+}else if(seconds < 10){
+    time = `00:${minutes}:0${seconds}`
+}else{
+    time = `00:${minutes}:${seconds}`
+}
+}, 1000)
+
+
+
+
 pergunta.textContent = questoes[nQuestao].pergunta
 
 a.textContent = questoes[nQuestao].alternativaA
@@ -60,6 +86,9 @@ function checkAnswer(resposta) {
 }
 
 function endGame() {
+    
+    clearInterval(timer)
+        console.log(time)
     numQuestao.textContent = "FIM DE JOGO"
 
     pergunta.textContent = `Você fez ${pontuacaoUsuario} pontos acertando ${acertos} de ${nQuestao} questões`
@@ -74,7 +103,8 @@ function endGame() {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        pontuacao: pontuacaoUsuario
+                        pontuacao: pontuacaoUsuario,
+                        time: time
                     })
                 }).catch(function (erro) {
                     console.log(erro);
@@ -86,7 +116,8 @@ function endGame() {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        pontuacao: pontuacaoUsuario
+                        pontuacao: pontuacaoUsuario,
+                        time: time
                     })
                 }).catch(function (erro) {
                     console.log(erro);

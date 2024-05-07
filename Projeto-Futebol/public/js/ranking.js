@@ -39,12 +39,14 @@ function logout() {
 
 const idUsuario = sessionStorage.ID_USUARIO
 
+const time = document.querySelector('#time')
 const userPoints = document.querySelector('#point')
 const ranking = document.querySelector('#ranking')
 
 fetch(`/pontuacao/buscarPontuacaoUsuario/${idUsuario}`).then(res => {
     res.json().then(res => {
         userPoints.textContent = `${res[0].pontuacao} pts`
+        time.textContent = `${res[0].tempoDecorrido}`
     })
 }).catch(function (erro) {
         console.log(erro);

@@ -3,9 +3,10 @@ let pontuacaoModel = require("../models/pontuacaoModel");
 function inserirPontuacao(req, res) {
     
     let pontuacao = req.body.pontuacao;
+    let time = req.body.time;
     let fkUsuario = req.params.idUsuario;
     
-    pontuacaoModel.inserirPontuacao(pontuacao, fkUsuario).then(
+    pontuacaoModel.inserirPontuacao(pontuacao, fkUsuario, time).then(
         function (resultado) {
             res.json(resultado);
         }
@@ -22,8 +23,9 @@ function atualizarPontuacao(req, res) {
 
     let pontuacao = req.body.pontuacao;
     let fkUsuario = req.params.idUsuario;
+    let time = req.body.time;
 
-    pontuacaoModel.atualizarPontuacao(pontuacao, fkUsuario).then(
+    pontuacaoModel.atualizarPontuacao(pontuacao, fkUsuario, time).then(
         function (resultado) {
             res.json(resultado);
         }
