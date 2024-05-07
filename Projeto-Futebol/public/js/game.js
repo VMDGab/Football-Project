@@ -23,20 +23,20 @@ let time = ''
 
 const timer = setInterval(() => {
     seconds++
-    if(seconds >= 59){
+    if (seconds >= 59) {
         minutes++
         seconds = seconds - 60
     }
 
-    if(minutes < 10 && seconds < 10){
-    time = `00:0${minutes}:0${seconds}`
-}else if(minutes < 10){
-    time = `00:0${minutes}:${seconds}`
-}else if(seconds < 10){
-    time = `00:${minutes}:0${seconds}`
-}else{
-    time = `00:${minutes}:${seconds}`
-}
+    if (minutes < 10 && seconds < 10) {
+        time = `00:0${minutes}:0${seconds}`
+    } else if (minutes < 10) {
+        time = `00:0${minutes}:${seconds}`
+    } else if (seconds < 10) {
+        time = `00:${minutes}:0${seconds}`
+    } else {
+        time = `00:${minutes}:${seconds}`
+    }
 }, 1000)
 
 
@@ -45,13 +45,20 @@ fetch(`/pergunta/buscarPergunta/1`).then(res => {
         pergunta.textContent = `${res[nQuestao].descricao}`
     })
 }).catch(function (erro) {
-        console.log(erro);
-    })
+    console.log(erro);
+})
 
-a.textContent = questoes[nQuestao].alternativaA
-b.textContent = questoes[nQuestao].alternativaB
-c.textContent = questoes[nQuestao].alternativaC
-d.textContent = questoes[nQuestao].alternativaD
+fetch(`/alternativa/buscarAlternativa/1`).then(res => {
+    res.json().then(res => {
+        console.log(res)
+        a.textContent = `${res[0].descricao}`
+        b.textContent = `${res[1].descricao}`
+        c.textContent = `${res[2].descricao}`
+        d.textContent = `${res[3].descricao}`
+       })
+}).catch(function (erro) {
+    console.log(erro);
+})
 
 function checkAnswer(resposta) {
 
@@ -84,18 +91,25 @@ function nextQuestion(nQuestao) {
             pergunta.textContent = `${res[0].descricao}`
         })
     }).catch(function (erro) {
-            console.log(erro);
-        })
-    a.textContent = questoes[nQuestao].alternativaA
-    b.textContent = questoes[nQuestao].alternativaB
-    c.textContent = questoes[nQuestao].alternativaC
-    d.textContent = questoes[nQuestao].alternativaD
-
+        console.log(erro);
+    })
+    fetch(`/alternativa/buscarAlternativa/${nQuestao + 1}`).then(res => {
+        res.json().then(res => {
+            console.log(res)
+            a.textContent = `${res[0].descricao}`
+            b.textContent = `${res[1].descricao}`
+            c.textContent = `${res[2].descricao}`
+            d.textContent = `${res[3].descricao}`
+           })
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+   
 }
 function endGame() {
-    
+
     clearInterval(timer)
-        console.log(time)
+    console.log(time)
     numQuestao.textContent = "FIM DE JOGO"
 
     pergunta.textContent = `Você fez ${pontuacaoUsuario} pontos acertando ${acertos} de ${nQuestao} questões`
@@ -103,34 +117,34 @@ function endGame() {
     fetch(`/pontuacao/buscarPontuacaoUsuario/${idUsuario}`).then(
         function (res) {
             res.json().then(res => {
-              if (res.length == 0) {
-                fetch(`/pontuacao/inserirPontuacao/${idUsuario}`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        pontuacao: pontuacaoUsuario,
-                        time: time
+                if (res.length == 0) {
+                    fetch(`/pontuacao/inserirPontuacao/${idUsuario}`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            pontuacao: pontuacaoUsuario,
+                            time: time
+                        })
+                    }).catch(function (erro) {
+                        console.log(erro);
                     })
-                }).catch(function (erro) {
-                    console.log(erro);
-                })
-            } else {
-                fetch(`/pontuacao/atualizarPontuacao/${idUsuario}`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        pontuacao: pontuacaoUsuario,
-                        time: time
+                } else {
+                    fetch(`/pontuacao/atualizarPontuacao/${idUsuario}`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            pontuacao: pontuacaoUsuario,
+                            time: time
+                        })
+                    }).catch(function (erro) {
+                        console.log(erro);
                     })
-                }).catch(function (erro) {
-                    console.log(erro);
-                })
-            }
-})
+                }
+            })
         }
     )
 
