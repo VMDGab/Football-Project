@@ -81,20 +81,9 @@ const q8 = {
     valor: 3000
 }
 
+
 const q9 = {
     numQuestao: 9,
-    pergunta: "Na final da copa do mundo de 2022, um jogador fez 3 gols na partida, quem é esse jogador?",
-    alternativaA: "Di Maria",
-    alternativaB: "Mbappe",
-    alternativaC: "Messi",
-    alternativaD: "De Paul",
-    correta: "Mbappe",
-    valor: 3000
-}
-
-
-const q10 = {
-    numQuestao: 10,
     pergunta: "No último lance da prorrogação da copa do mundo de 2022, um jogador perdeu um gol cara a cara com o goleiro, quem é esse jogador?",
     alternativaA: "Mac Allister",
     alternativaB: "Dembelé",
@@ -103,8 +92,8 @@ const q10 = {
     correta: "Kolo Muani",
     valor: 7000
 }
-const q11 = {
-    numQuestao: 11,
+const q10 = {
+    numQuestao: 10,
     pergunta: "Qual jogador levou uma cabeçada na final da copa do mundo de 2006?",
     alternativaA: "Pirlo",
     alternativaB: "Materazzi",
@@ -114,4 +103,4 @@ const q11 = {
     valor: 7000
 }
 
-const questoes = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11]
+const questoes = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]

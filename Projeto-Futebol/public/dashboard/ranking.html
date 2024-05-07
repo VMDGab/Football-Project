@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ranking.css">
+    <title>Ranking</title>
+</head>
+
+<body>
+    <div id="content">
+        <div class="menu">
+            <img src="../assets/Logo.png" class="logo">
+
+            <div class="menuOptions">
+                <a href="./dashboard.html" class="option">Game</a>
+                <a href="./ranking.html" class="option">Ranking</a>
+            </div>
+
+            <i class="fa-solid fa-right-from-bracket fa-2xl logout" style="color: #f5f5f5;" onclick="logout()"></i>
+        </div>
+
+        <div class="container">
+            <div class="stats">
+                <div class="mainStat">
+                    <span class="statsTitle">Sua Pontuação</span>
+                    <span class="stat">41000 pontos</span>
+                </div>
+
+                <div class="mainStat">
+                    <span class="statsTitle">Tempo decorrido</span>
+                    <span class="stat">00:01:30</span>
+                </div>
+
+                <div class="hitPercentage">
+                    <span class="smTitle">Porcentagem de acerto</span>
+                    <div class="chart">
+                        <canvas id="percentage"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rankingContainer">
+                <div class="header">
+                    <span class="title">Raking geral</span>
+                    <button class="btnFollow">Seguindo</button>
+                </div>
+
+                <div class="ranking">
+                    <div class="player">
+                        <div class="positionPlayer">
+                            <span class="position">1°</span>
+                            <span class="namePlayer">Victor</span>
+                        </div>
+                        <span class="points">41000 pontos</span>
+                    </div>
+
+                    <div class="player">
+                        <div class="positionPlayer">
+                            <span class="position">2°</span>
+                            <span class="namePlayer">Caio</span>
+                        </div>
+                        <span class="points">38000 pontos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="https://kit.fontawesome.com/77b47374b3.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/ranking.js"></script>
