@@ -40,27 +40,18 @@ const timer = setInterval(() => {
 }, 1000)
 
 
-
-
-pergunta.textContent = questoes[nQuestao].pergunta
+fetch(`/pergunta/buscarPergunta/1`).then(res => {
+    res.json().then(res => {
+        pergunta.textContent = `${res[nQuestao].descricao}`
+    })
+}).catch(function (erro) {
+        console.log(erro);
+    })
 
 a.textContent = questoes[nQuestao].alternativaA
 b.textContent = questoes[nQuestao].alternativaB
 c.textContent = questoes[nQuestao].alternativaC
 d.textContent = questoes[nQuestao].alternativaD
-
-
-
-function nextQuestion(nQuestao) {
-
-    numQuestao.textContent = questoes[nQuestao].numQuestao
-    pergunta.textContent = questoes[nQuestao].pergunta
-    a.textContent = questoes[nQuestao].alternativaA
-    b.textContent = questoes[nQuestao].alternativaB
-    c.textContent = questoes[nQuestao].alternativaC
-    d.textContent = questoes[nQuestao].alternativaD
-
-}
 
 function checkAnswer(resposta) {
 
@@ -84,7 +75,23 @@ function checkAnswer(resposta) {
     }, 300)
 
 }
+function nextQuestion(nQuestao) {
 
+    numQuestao.textContent = questoes[nQuestao].numQuestao
+    fetch(`/pergunta/buscarPergunta/${nQuestao + 1}`).then(res => {
+        res.json().then(res => {
+            console.log(res);
+            pergunta.textContent = `${res[0].descricao}`
+        })
+    }).catch(function (erro) {
+            console.log(erro);
+        })
+    a.textContent = questoes[nQuestao].alternativaA
+    b.textContent = questoes[nQuestao].alternativaB
+    c.textContent = questoes[nQuestao].alternativaC
+    d.textContent = questoes[nQuestao].alternativaD
+
+}
 function endGame() {
     
     clearInterval(timer)

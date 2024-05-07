@@ -103,4 +103,4 @@ const q10 = {
     valor: 7000
 }
 
-const questoes = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
+const questoes = [q1, q2, q3]
