@@ -46,13 +46,13 @@ function checkAnswer(resposta) {
         pontuacaoUsuario += questoes[nQuestao].valor
         acertos += 1
     }
-    
-    setTimeout(function(){
+
+    setTimeout(function () {
         nQuestao = nQuestao + 1
-        
-        if(nQuestao > questoes.length - 1){
+
+        if (nQuestao > questoes.length - 1) {
             endGame()
-        }else{
+        } else {
             nextQuestion(nQuestao)
         }
 
@@ -60,37 +60,58 @@ function checkAnswer(resposta) {
 
 }
 
-function endGame(){
+function endGame() {
     numQuestao.textContent = "FIM DE JOGO"
 
     pergunta.textContent = `Você fez ${pontuacaoUsuario} pontos acertando ${acertos} de ${nQuestao} questões`
 
-    fetch(`/pontuacao/inserirPontuacao/${idUsuario}`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            pontuacao: pontuacaoUsuario
-           })
-    }).catch(function (erro) {
-        console.log(erro);
-    })
+    fetch(`/pontuacao/buscarPontuacaoUsuario/${idUsuario}`).then(
+        function (res) {
+            if (res.ok) {
+                fetch(`/pontuacao/atualizarPontuacao/${idUsuario}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        pontuacao: pontuacaoUsuario
+                    })
+                }).catch(function (erro) {
+                    console.log(erro);
+                })
+            } else {
+                fetch(`/pontuacao/inserirPontuacao/${idUsuario}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        pontuacao: pontuacaoUsuario
+                    })
+                }).catch(function (erro) {
+                    console.log(erro);
+                })
+            }
 
-    divQuestoes.style.display = "none" 
-    questionNumber.style.display = "none" 
-    
-    setTimeout(function(){
-       location.replace("../dashboard/ranking.html")
+        }
+    )
+
+
+
+    divQuestoes.style.display = "none"
+    questionNumber.style.display = "none"
+
+    setTimeout(function () {
+        location.replace("../dashboard/ranking.html")
     }, 5000)
 }
 
-function goHome(){
+function goHome() {
     location.replace('../dashboard/home.html')
 }
 
 window.addEventListener('load', () => {
-    if(sessionStorage.length == 0){
+    if (sessionStorage.length == 0) {
         location.replace('../login.html')
     }
 })

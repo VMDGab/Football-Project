@@ -7,15 +7,15 @@ router.post("/inserirPontuacao/:idUsuario", function (req, res) {
     pontuacaoController.inserirPontuacao(req, res);
 });
 
-router.post(`/atualizarPontuacao/`, function (req, res) {
+router.post(`/atualizarPontuacao/:idUsuario`, function (req, res) {
     pontuacaoController.atualizarPontuacao(req, res);
 })
 
-router.get(`/buscarPontuacaoUsuario/`, function (req, res) {
+router.get(`/buscarPontuacaoUsuario/:idUsuario`, function (req, res) {
     pontuacaoController.buscarPontuacaoUsuario(req, res);
 })
 
-router.get(`/buscarRanking/`, function (req, res) {
+router.get(`/buscarRanking/:idUsuario`, function (req, res) {
     pontuacaoController.buscarRanking(req, res);
 })
 

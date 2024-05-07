@@ -20,8 +20,8 @@ function inserirPontuacao(req, res) {
 
 function atualizarPontuacao(req, res) {
 
-    let pontuacao = req.params.pontucao;
-    let fkUsuario = req.params.fkUsuario;
+    let pontuacao = req.body.pontuacao;
+    let fkUsuario = req.params.idUsuario;
 
     pontuacaoModel.atualizarPontuacao(pontuacao, fkUsuario).then(
         function (resultado) {
@@ -38,7 +38,7 @@ function atualizarPontuacao(req, res) {
 
 function buscarPontuacaoUsuario(req, res) {
  
-    let fkUsuario = req.params.fkUsuario;
+    let fkUsuario = req.params.idUsuario;
 
     pontuacaoModel.buscarPontuacaoUsuario(fkUsuario).then(
         function (resultado) {
