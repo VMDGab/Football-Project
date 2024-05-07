@@ -1,5 +1,4 @@
 const idUsuario = sessionStorage.ID_USUARIO
-console.log(idUsuario)
 
 let numQuestao = document.querySelector('#numQuestao')
 let pergunta = document.querySelector('#pergunta')
@@ -67,19 +66,8 @@ function endGame() {
 
     fetch(`/pontuacao/buscarPontuacaoUsuario/${idUsuario}`).then(
         function (res) {
-            if (res.ok) {
-                fetch(`/pontuacao/atualizarPontuacao/${idUsuario}`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        pontuacao: pontuacaoUsuario
-                    })
-                }).catch(function (erro) {
-                    console.log(erro);
-                })
-            } else {
+            res.json().then(res => {
+              if (res.length == 0) {
                 fetch(`/pontuacao/inserirPontuacao/${idUsuario}`, {
                     method: "POST",
                     headers: {
@@ -91,8 +79,20 @@ function endGame() {
                 }).catch(function (erro) {
                     console.log(erro);
                 })
+            } else {
+                fetch(`/pontuacao/atualizarPontuacao/${idUsuario}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        pontuacao: pontuacaoUsuario
+                    })
+                }).catch(function (erro) {
+                    console.log(erro);
+                })
             }
-
+})
         }
     )
 
