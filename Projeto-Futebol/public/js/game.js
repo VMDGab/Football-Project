@@ -55,24 +55,27 @@ fetch(`/alternativa/buscarAlternativa/1`).then(res => {
         b.textContent = `${res[1].descricao}`
         c.textContent = `${res[2].descricao}`
         d.textContent = `${res[3].descricao}`
-       })
+    })
 }).catch(function (erro) {
     console.log(erro);
 })
 
 function checkAnswer(resposta) {
-
-    let respostaUsuario = resposta.textContent
-    let respostaCorreta = questoes[nQuestao].correta
-
-    if (respostaUsuario == respostaCorreta) {
-        pontuacaoUsuario += questoes[nQuestao].valor
-        acertos += 1
-    }
-
+    fetch(`/pergunta/buscarPergunta/${nQuestao + 1}`).then(res => {
+        let respostaUsuario = resposta.textContent
+        res.json().then(res => {
+            console.log(res);
+            let respostaCorreta = res[0].resposta
+            if (respostaUsuario == respostaCorreta) {
+                pontuacaoUsuario += res[0].valor
+                acertos += 1
+            }
+        })
+    }).catch(function (erro) {
+        console.log(erro);
+    })
     setTimeout(function () {
         nQuestao = nQuestao + 1
-
         if (nQuestao > questoes.length - 1) {
             endGame()
         } else {
@@ -80,7 +83,6 @@ function checkAnswer(resposta) {
         }
 
     }, 300)
-
 }
 function nextQuestion(nQuestao) {
 
@@ -100,11 +102,11 @@ function nextQuestion(nQuestao) {
             b.textContent = `${res[1].descricao}`
             c.textContent = `${res[2].descricao}`
             d.textContent = `${res[3].descricao}`
-           })
+        })
     }).catch(function (erro) {
         console.log(erro);
     })
-   
+
 }
 function endGame() {
 
