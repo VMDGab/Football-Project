@@ -75,18 +75,28 @@ function checkAnswer(resposta) {
         console.log(erro);
     })
     setTimeout(function () {
-        nQuestao = nQuestao + 1
-        if (nQuestao > questoes.length - 1) {
+        
+fetch(`/pergunta/buscarTodasPergunta/`).then(
+    res => {
+    res.json().then(res => {
+        console.log(res)
+     nQuestao = nQuestao + 1
+        if (nQuestao > res.length - 1) {
             endGame()
         } else {
             nextQuestion(nQuestao)
         }
+    })
+}).catch(function (erro) {
+    console.log(erro);
+})
+        
 
     }, 300)
 }
 function nextQuestion(nQuestao) {
 
-    numQuestao.textContent = questoes[nQuestao].numQuestao
+    numQuestao.textContent = nQuestao + 1
     fetch(`/pergunta/buscarPergunta/${nQuestao + 1}`).then(res => {
         res.json().then(res => {
             console.log(res);

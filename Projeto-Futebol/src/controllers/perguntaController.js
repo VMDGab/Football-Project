@@ -7,9 +7,20 @@ function buscarPergunta(req, res) {
     res.status(200).json(resultado);
   });
 }
+function buscarTodasPergunta(req, res) {
 
+  perguntaModel.buscarTodasPergunta().then((perguntaRes) => {
+    res.status(200).json(perguntaRes);
+  }).catch(
+    function (erro) {
+      console.log(erro);
+      res.status(500).json(erro.sqlMessage);
+    }
+  );
+}
 
 
 module.exports = {
   buscarPergunta,
+  buscarTodasPergunta
 };

@@ -6,4 +6,13 @@ function buscarPergunta(idPergunta) {
   return database.executar(instrucaoSql);
 }
 
-module.exports = {buscarPergunta};
+function buscarTodasPergunta() {
+  var instrucaoSql = `SELECT * FROM pergunta`;
+
+  return database.executar(instrucaoSql);
+}
+
+module.exports = {
+  buscarPergunta,
+  buscarTodasPergunta
+};
