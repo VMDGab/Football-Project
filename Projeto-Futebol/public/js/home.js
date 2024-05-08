@@ -1,4 +1,4 @@
-const instrucoes = document.querySelector('#Instrucoes')
+const instrucoes = document.querySelector('#instrucoes')
 
 window.addEventListener('load', () => {
     if(sessionStorage.length == 0){

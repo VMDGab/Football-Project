@@ -137,7 +137,8 @@ function endGame() {
                         },
                         body: JSON.stringify({
                             pontuacao: pontuacaoUsuario,
-                            time: time
+                            time: time,
+                            acerto : acertos
                         })
                     }).catch(function (erro) {
                         console.log(erro);
@@ -150,7 +151,8 @@ function endGame() {
                         },
                         body: JSON.stringify({
                             pontuacao: pontuacaoUsuario,
-                            time: time
+                            time: time,
+                            acerto : acertos
                         })
                     }).catch(function (erro) {
                         console.log(erro);

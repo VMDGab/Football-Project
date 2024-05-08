@@ -44,7 +44,9 @@ function cadastrar(req, res) {
     // Faça as validações dos valores
     if (nome == "") {
         res.status(400).send("Informe seu nome!");
-    } else if (!isEmailValido) {
+    } else if (nome.length >= 15) {
+        res.status(400).send("Insira um nome com até 14 caracteres!");
+    }else if (!isEmailValido) {
         res.status(400).send("Seu email não é válido!");
     } else if (senha.length < 6) {
         res.status(400).send("Sua senha possui menos de 6 caracteres!");

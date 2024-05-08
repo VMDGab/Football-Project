@@ -4,9 +4,10 @@ function inserirPontuacao(req, res) {
     
     let pontuacao = req.body.pontuacao;
     let time = req.body.time;
+    let acerto = req.body.acerto;
     let fkUsuario = req.params.idUsuario;
     
-    pontuacaoModel.inserirPontuacao(pontuacao, fkUsuario, time).then(
+    pontuacaoModel.inserirPontuacao(pontuacao, fkUsuario, time, acerto).then(
         function (resultado) {
             res.json(resultado);
         }
@@ -24,8 +25,9 @@ function atualizarPontuacao(req, res) {
     let pontuacao = req.body.pontuacao;
     let fkUsuario = req.params.idUsuario;
     let time = req.body.time;
+    let acerto = req.body.acerto;
 
-    pontuacaoModel.atualizarPontuacao(pontuacao, fkUsuario, time).then(
+    pontuacaoModel.atualizarPontuacao(pontuacao, fkUsuario, time, acerto).then(
         function (resultado) {
             res.json(resultado);
         }
