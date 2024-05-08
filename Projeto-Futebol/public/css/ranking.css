@@ -81,7 +81,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 70%;
+    height: 80%;
     width: 30%;
     margin-left: 15%;
     color: #F5F5F5;
@@ -131,7 +131,7 @@ body{
 }
 
 .rankingContainer{
-    height: 70%;
+    height: 80%;
     width: 30%;
     background-color: #292929cc;
     margin-right: 15%;
