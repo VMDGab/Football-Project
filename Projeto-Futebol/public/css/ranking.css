@@ -82,8 +82,8 @@ body{
     flex-direction: column;
     justify-content: space-between;
     height: 80%;
-    width: 30%;
-    margin-left: 15%;
+    width: 38%;
+    margin-left: 10%;
     color: #F5F5F5;
     font-family: "Exo 2";
 }
@@ -132,9 +132,9 @@ body{
 
 .rankingContainer{
     height: 80%;
-    width: 30%;
+    width: 40%;
     background-color: #292929cc;
-    margin-right: 15%;
+    margin-right: 10%;
     border-radius: 20px;
 }
 .header{
