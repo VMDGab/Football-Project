@@ -8,7 +8,7 @@ flush privileges;
 
 create table usuario(
 idUsuario int primary key auto_increment,
-nomeUsuario varchar(45),
+nomeUsuario varchar(14),
 email varchar(100) unique,
 senha varchar(20)
 );
@@ -26,7 +26,9 @@ create table pontuacao(
 idPontuacao int primary key auto_increment,
 pontuacao int,
 fkUsuario int,
-foreign key(fkUsuario) references usuario(idUsuario)
+foreign key(fkUsuario) references usuario(idUsuario),
+tempoDecorrido time,
+acerto int
 );
 
 select * from usuarioSeguidor;
@@ -66,12 +68,16 @@ insert into alternativa values
 (default, "Cristiano Ronaldo", 3),
 (default, "Xavi", 3);
 
-select * from pontuacao;
+
 
 insert into pontuacao (pontuacao, fkUsuario) values(
 10000, 2
 );
-truncate pontuacao;
+
 
 select usuario.nomeUsuario, pontuacao.pontuacao 
     from usuario join pontuacao on pontuacao.fkUsuario = usuario.idUsuario
+    
+select * from usuario;
+
+

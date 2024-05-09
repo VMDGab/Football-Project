@@ -3,7 +3,8 @@ const idUsuario = sessionStorage.ID_USUARIO
 const time = document.querySelector('#time')
 const userPoints = document.querySelector('#point')
 const ranking = document.querySelector('#ranking')
-
+const seguindo = document.querySelector('#seguindo')
+const usuario = document.querySelector('#usuario')
 let qtdPerguntas = 0
 
 fetch(`/pontuacao/buscarPontuacaoUsuario/${idUsuario}`).then(res => {
@@ -18,7 +19,7 @@ fetch(`/pontuacao/buscarPontuacaoUsuario/${idUsuario}`).then(res => {
 fetch(`/pontuacao/buscarRanking/`).then(
     res => {
         res.json().then(res => {
-            for (i = 0; i <= res.length; i++) {
+               for (i = 0; i <= res.length; i++) {
                 ranking.innerHTML += `
                 <div class="player">
                 <div class="positionPlayer">
@@ -26,12 +27,59 @@ fetch(`/pontuacao/buscarRanking/`).then(
                     <span class="namePlayer">${res[i].nomeUsuario}</span>
                 </div>
                 <span class="points">${res[i].pontuacao}</span>
+                <button onclick='seguir(this)' value='${res[i].idUsuario}' class="follow">Seguir</button>
+              
                 </div>`
-            }
+               }
+
+           
         })
     }).catch(function (erro) {
         console.log(erro);
     })
+
+    function seguir(res){
+        fetch(`/pontuacao/seguirUsuario/${idUsuario}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                usuarioSeguido: res.value,
+            })
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+    }
+
+    
+
+    seguindo.onclick = function(){
+        
+        ranking.innerHTML = ''
+        fetch(`/pontuacao/buscarRankingSeguidor/${idUsuario}`).then(
+            res => {
+                res.json().then(res => {
+                   for (i = 0; i <= res.length; i++) {
+                        ranking.innerHTML += `
+                        <div class="player">
+                        <div class="positionPlayer">
+                            <span class="position">${i + 1}°</span>
+                            <span class="namePlayer">${res[i].nomeUsuario}</span>
+                        </div>
+                        <span class="points">${res[i].pontuacao}</span>
+                        <button class="follow following">Seguindo</button>
+                        </div>`
+                    }
+                })
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+
+    }
+    
+
+
 
 fetch(`/pergunta/buscarTodasPergunta/`).then(
     res => {

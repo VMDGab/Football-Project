@@ -26,8 +26,24 @@ function buscarPontuacaoUsuario(fkUsuario) {
 
 function buscarRanking() {
 
-    var instrucaoSql = `select usuario.nomeUsuario, pontuacao.pontuacao 
+    var instrucaoSql = `select usuario.idUsuario, usuario.nomeUsuario, pontuacao.pontuacao 
     from usuario join pontuacao on pontuacao.fkUsuario = usuario.idUsuario order by pontuacao.pontuacao desc`;
+
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function buscarRankingSeguidor(fkUsuario){
+    var instrucaoSql = `select usuario.idUsuario, usuario.nomeUsuario, pontuacao.pontuacao from usuario join pontuacao join usuarioSeguidor on fkUsuario = idUsuario and fkUsuarioSeguido = idUsuario and fkUsuarioSeguidor = ${fkUsuario}; `;
+
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function seguirUsuario(fkUsuarioSeguido, fkUsuarioSeguidor){
+    var instrucaoSql = `insert into usuarioSeguidor (fkUsuarioSeguido, fkUsuarioSeguidor) values ( ${fkUsuarioSeguido}, ${fkUsuarioSeguidor}); `;
 
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
@@ -38,6 +54,8 @@ module.exports = {
     inserirPontuacao,
     atualizarPontuacao,
     buscarPontuacaoUsuario,
-    buscarRanking
+    buscarRanking,
+    buscarRankingSeguidor,
+    seguirUsuario
 
 }

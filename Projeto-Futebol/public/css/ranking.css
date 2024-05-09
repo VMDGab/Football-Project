@@ -1,28 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
+body {
     margin: 0;
-  }
- 
- #content{
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.500) 35%, rgba(41, 41, 41, 0.500) 100%), url(../assets/background.svg);
-     width: 100%;
-     height: 100vh;
-     background-repeat: no-repeat;
-     margin: 0;
-     background-size: cover;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-   }
- .menu{
+}
+
+#content {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.500) 35%, rgba(41, 41, 41, 0.500) 100%), url(../assets/background.svg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    margin: 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu {
     display: flex;
     align-items: center;
     justify-content: space-around;
-   
+
     height: 200px;
     z-index: 1;
 }
+
 .logo {
 
     height: 100px;
@@ -30,9 +32,9 @@ body{
     margin-right: 1000px;
 }
 
-.menuOptions{
+.menuOptions {
     display: flex;
-    width: 500px;   
+    width: 500px;
     height: 80px;
     align-items: center;
     justify-content: space-around;
@@ -41,7 +43,7 @@ body{
     position: absolute;
 }
 
-.option{
+.option {
     font-family: "Exo 2";
     font-weight: 900;
     font-style: italic;
@@ -56,31 +58,34 @@ body{
     justify-content: center;
     transition: all .5s ease-in-out;
     z-index: 1;
-    
+
 }
-.option:hover{
+
+.option:hover {
     background-color: #EB6C29;
 }
-.logout{
+
+.logout {
     transition: all .5s ease-out;
     cursor: pointer;
 }
-.logout:active{
+
+.logout:active {
     transform: scale(.9);
 }
 
-.container{
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    }
+    height: 87vh;
+}
 
-.stats{
+.stats {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 80%;
     width: 38%;
     margin-left: 10%;
@@ -88,7 +93,7 @@ body{
     font-family: "Exo 2";
 }
 
-.mainStat{
+.mainStat {
     display: flex;
     justify-content: space-between;
     background-color: #292929cc;
@@ -99,17 +104,18 @@ body{
     border-radius: 20px;
 }
 
-.statsTitle{
+.statsTitle {
     margin-left: 30px;
     font-weight: 600;
 }
-.stat{
+
+.stat {
     margin-right: 30px;
     color: #EB6C29;
     font-weight: 900;
 }
 
-.hitPercentage{
+.hitPercentage {
     display: flex;
     flex-direction: column;
     background-color: #292929cc;
@@ -117,12 +123,14 @@ body{
     height: 300px;
     border-radius: 20px;
 }
-.chart{
-    height: 400px;
+
+.chart {
+    height: 380px;
     width: 400px;
     margin-top: -13%;
-   }
-.smTitle{
+}
+
+.smTitle {
     color: #F5F5F5;
     font-family: "Exo 2";
     font-weight: 700;
@@ -130,28 +138,29 @@ body{
     margin-top: 20px;
 }
 
-.rankingContainer{
+.rankingContainer {
     height: 80%;
     width: 40%;
     background-color: #292929cc;
     margin-right: 10%;
     border-radius: 20px;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100px;
 }
 
-.title{
+.title {
     color: #F5F5F5;
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 40px;
 }
 
-.btnFollow{
+.btnFollow {
     height: 40px;
     width: 170px;
     border: none;
@@ -163,19 +172,52 @@ body{
     font-size: 20px;
     transition: all .3s ease-in-out;
 }
-.btnFollow:active{
+
+.btnFollow:active {
     transform: scale(.9);
 }
-.btnFollow:hover{
+
+.btnFollow:hover {
     background-color: #c54e0ee1;
 }
-.ranking{
+
+.ranking {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    overflow-y: auto;
+    height: 62%;
+    scrollbar-color: #EB6C29 #ffffffe1;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    overscroll-behavior: smooth;
 }
-.player{
+
+.follow {
+    width: 150px;
+    margin-left: 20px;
+    margin-bottom: 2px;
+    border: solid 2px #EB6C29;
+    background-color: #F5F5F5;
+    color: #292929cc;
+    border-radius: 10px;
+    font-family: "Exo 2";
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all .6s ease-in-out;
+}
+.following {
+    background-color: #EB6C29;
+    color: #f5f5f5;
+  }
+
+
+.follow:active{
+    transform: scale(.9);
+}
+
+.player {
     border-bottom: #F5F5F5 3px solid;
     width: 80%;
     height: 42px;
@@ -186,20 +228,17 @@ body{
     font-weight: 700;
     font-size: 28px;
     margin-bottom: 30px;
-    }
+}
 
-.positionPlayer{
+.positionPlayer {
     display: flex;
     width: 100%;
 }
-.position{
+
+.position {
     margin-right: 10px;
 }
 
-.points{
+.points {
     color: #EB6C29;
 }
-
-
-
-

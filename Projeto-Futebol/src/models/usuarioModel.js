@@ -12,8 +12,13 @@ function cadastrar(nome, email, senha) {
     `;
     return database.executar(instrucaoSql);
 }
+function listAll() {
+    const instruction = `SELECT * FROM usuario;`;
+    return database.executar(instruction);
+}
 
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    listAll
 };

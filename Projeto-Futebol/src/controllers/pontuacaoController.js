@@ -67,10 +67,40 @@ function buscarRanking(req, res) {
         }
     );
 }
+function buscarRankingSeguidor(req, res) {
+ 
+    let fkUsuario = req.params.idUsuario;
+    pontuacaoModel.buscarRankingSeguidor(fkUsuario).then(rankingRes => {
+        res.status(200).json(rankingRes);
+        }).catch(
+        function (erro) {
+            console.log(erro);
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+}
+
+function seguirUsuario(req, res) {
+    let fkUsuarioSeguidor = req.params.idUsuario;
+    let fkUsuarioSeguido = req.body.usuarioSeguido;
+
+    pontuacaoModel.seguirUsuario(fkUsuarioSeguido,fkUsuarioSeguidor).then(
+        function (resultado) {
+            res.json(resultado);
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+}
 
 module.exports = {
     inserirPontuacao,
     atualizarPontuacao,
     buscarPontuacaoUsuario,
-    buscarRanking
+    buscarRanking,
+    buscarRankingSeguidor,
+    seguirUsuario
 }

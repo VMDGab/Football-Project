@@ -9,8 +9,8 @@ function Verificar() {
     const successModal = success
     const msgModal = msg
 
-    const close = btnClose
-    const login = btnLogin
+    const close = document.querySelector('#btnClose')
+    const login = document.querySelector('#btnLogin')
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -47,6 +47,7 @@ function Verificar() {
 
             if (resposta.ok) {
                 successModal.showModal();
+                 window.location.replace('./login.html')
             } else {
                 res.text().then(text => {
                     modal.showModal();
@@ -59,13 +60,13 @@ function Verificar() {
             }
         })
 
-        close.onclick = function () {
-            modal.close()
-        }
-        login.onclick = function () {
-            successModal.close()
-            window.location.replace('./login.html')
-        }
-
+        
+    }
+    close.onclick = function () {
+        modal.close()
+    }
+    login.onclick = function () {
+        successModal.close()
+       
     }
 }

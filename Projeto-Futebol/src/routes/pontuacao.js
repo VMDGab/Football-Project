@@ -17,6 +17,13 @@ router.get(`/buscarPontuacaoUsuario/:idUsuario`, function (req, res) {
 
 router.get(`/buscarRanking/`, function (req, res) {
     pontuacaoController.buscarRanking(req, res);
+    
+})
+router.post("/seguirUsuario/:idUsuario", function (req, res) {
+    pontuacaoController.seguirUsuario(req, res);
+});
+router.get(`/buscarRankingSeguidor/:idUsuario`, function (req, res) {
+    pontuacaoController.buscarRankingSeguidor(req, res);
 })
 
 module.exports = router;
