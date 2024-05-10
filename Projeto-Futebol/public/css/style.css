@@ -247,7 +247,7 @@ body::-webkit-scrollbar-thumb {
 .mainText {
     font-family: "Exo 2";
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     color: #292929;
 }
 
@@ -277,7 +277,7 @@ body::-webkit-scrollbar-thumb {
 .pele {
 
     margin-top: 60px;
-    height:110%;
+    height:90%;
   box-shadow: #143C62 -3px 10px 10px;
 }
 
@@ -296,7 +296,7 @@ body::-webkit-scrollbar-thumb {
     width: 60%;
 }
 .johan {
-    height: 700px;
+    height:90%;
    
 }
 
