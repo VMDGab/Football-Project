@@ -489,5 +489,98 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column; 
     justify-content: center;
+    align-items: center;
+
  
+}
+.header{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+.btnQuiz{
+    width: 300px;
+    height: 64px;
+    background-color: #E79118;
+    border-radius: 10px;
+    border:none;
+    color: #fff;
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 34px;
+    font-style: italic;
+    text-shadow: #0c2135 0 2px 6px;
+    box-shadow: #091928 4px 6px 10px;
+    cursor: pointer;
+    transition: all ease-in-out .4s;
+}
+.btnQuiz:active{
+    transform: scale(.97);
+}
+.descQuiz{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 40%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #0F3559;
+    border-radius: 40px;
+    box-shadow: #091928 0 6px 10px;
+}
+.align{
+    width: 80%;
+}
+#dev{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #143C62;
+}
+.devPhoto{
+    width: 340px;
+    height: 340px;
+    border-radius: 300px;
+    border:#c00000 6px solid;
+    box-shadow: #091928 0 6px 10px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30%;
+    margin-left: 6%;
+    width: 50%;
+
+}
+
+.thin{
+    font-weight: 500;
+}
+
+.footer{
+    width: 100%;
+    height: 150px;
+    background-color: #143C62;
+    border-top: #215c94 2px solid;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerLogo{
+    width: 120px;
+    height: 120px;
+}
+.info{
+    color: #fff;
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 14px;
 }
