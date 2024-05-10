@@ -5,6 +5,8 @@ const userPoints = document.querySelector('#point')
 const ranking = document.querySelector('#ranking')
 const usuario = document.querySelector('#usuario')
 const rankingHeader = document.querySelector('#header')
+const btnSeguir = document.querySelector('#btnSeguir')
+
 
 let qtdPerguntas = 0
 
@@ -19,44 +21,89 @@ fetch(`/pontuacao/buscarPontuacaoUsuario/${idUsuario}`).then(res => {
 
 buscarRanking();
 
-function buscarRanking(){
-fetch(`/pontuacao/buscarRanking/`).then(
-    res => {
-        res.json().then(res => {
-            for (i = 0; i <= res.length; i++) {
-                if (res[i].idUsuario == idUsuario) {
-                    ranking.innerHTML += `
-                    <div class="player">
-                    <div class="positionPlayer">
-                        <span class="position">${i + 1}°</span>
-                        <span class="namePlayer">${res[i].nomeUsuario}</span>
-                    </div>
-                    <span class="points">${res[i].pontuacao}</span>
-                    </div>`
-                } else {
-                    ranking.innerHTML += `
-                    <div class="player">
-                    <div class="positionPlayer">
-                        <span class="position">${i + 1}°</span>
-                        <span class="namePlayer">${res[i].nomeUsuario}</span>
-                    </div>
-                    <span class="points">${res[i].pontuacao}</span>
-                    <button onclick='seguir(this)' value='${res[i].idUsuario}' class="follow">Seguir</button>
-                  </div>`
-                }
-            }
+ function buscarRanking() {
+    let contador = 0;
+     fetch(`/seguidor/seguindoRanking/${idUsuario}`).then(response => {
+        response.json().then(response => {
 
+            fetch(`/pontuacao/buscarRanking/`).then(
+                res => {
+                    console.log(response)
+                    res.json().then(res => {
+                        for (i = 0; i <= res.length; i++) {
+                            if (res[i].idUsuario == idUsuario) {
+                                ranking.innerHTML += `
+                                <div class="player">
+                                <div class="positionPlayer">
+                                    <span class="position">${i + 1}°</span>
+                                    <span class="namePlayer">${res[i].nomeUsuario}</span>
+                                </div>
+                                <span class="points">${res[i].pontuacao}</span>
+                                </div>`
+                                contador++
+                            }
+                            else if (response.length > 0) {
+                               if (response[contador] == undefined) {
+                                    ranking.innerHTML += `
+                            <div class="player">
+                            <div class="positionPlayer">
+                                <span class="position">${i + 1}°</span>
+                                <span class="namePlayer">${res[i].nomeUsuario}</span>
+                            </div>
+                            <span class="points">${res[i].pontuacao}</span>
+                            <button onclick='seguir(this)' id="btnSeguir" value='${res[i].idUsuario}' class="follow">Seguir</button>
+                          </div>` 
+                        
+                                }
+                                else if (res[i].idUsuario == response[contador].fkUsuarioSeguido) {
+                                    ranking.innerHTML += `
+                                        <div class="player">
+                                        <div class="positionPlayer">
+                                            <span class="position">${i + 1}°</span>
+                                            <span class="namePlayer">${res[i].nomeUsuario}</span>
+                                        </div>
+                                        <span class="points">${res[i].pontuacao}</span>
+                                        <button onclick='deixarSeguir(this)' id="btnSeguir" value='${res[i].idUsuario}' class="follow following">Seguindo</button>
+                                    </div>`
+                                    contador++
+                                }else {
+                                    ranking.innerHTML += `
+                                    <div class="player">
+                                    <div class="positionPlayer">
+                                        <span class="position">${i + 1}°</span>
+                                        <span class="namePlayer">${res[i].nomeUsuario}</span>
+                                    </div>
+                                    <span class="points">${res[i].pontuacao}</span>
+                                    <button onclick='seguir(this)' id="btnSeguir" value='${res[i].idUsuario}' class="follow">Seguir</button>
+                                </div>`
 
+                                
+                                }
+
+                            }
+                           
+                        }
+                    })
+
+                })
+                .catch(function (erro) {
+                    console.log(erro);
+                })
+
+        }).catch(function (erro) {
+            console.log(erro);
         })
-    }).catch(function (erro) {
-        console.log(erro);
     })
+
 }
 
-
-
 function seguir(res) {
-    fetch(`/pontuacao/seguirUsuario/${idUsuario}`, {
+    res.textContent = "Seguindo"
+    res.setAttribute('onclick', 'deixarSeguir(this)')
+    res.setAttribute('class', 'follow following')
+
+
+    fetch(`/seguidor/seguirUsuario/${idUsuario}`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -69,15 +116,31 @@ function seguir(res) {
     })
 }
 
+function deixarSeguir(res) {
+    res.textContent = "Seguir"
+    res.setAttribute('onclick', 'seguir(this)')
+    res.setAttribute('class', 'follow')
 
+    fetch(`/seguidor/deixarSeguirUsuario/${idUsuario}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            usuarioSeguido: res.value,
+        })
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+}
 
- function seguindo() {
+function seguindo() {
     rankingHeader.innerHTML = `
     <span class="title">Pessoas seguidas</span>
     <button class="btnFollow" onclick='rankingGeral()'>Geral</button>
     `
     ranking.innerHTML = ''
-    fetch(`/pontuacao/buscarRankingSeguidor/${idUsuario}`).then(
+    fetch(`/seguidor/buscarRankingSeguidor/${idUsuario}`).then(
         res => {
             res.json().then(res => {
                 for (i = 0; i <= res.length; i++) {
@@ -96,19 +159,14 @@ function seguir(res) {
             console.log(erro);
         })
 }
-function rankingGeral(){
+function rankingGeral() {
     ranking.innerHTML = ''
     rankingHeader.innerHTML = `
     <span class="title">Raking geral</span>
     <button class="btnFollow" onclick="seguindo()">Seguindo</button>
     `
-
     buscarRanking();
-
 }
-
-
-
 
 fetch(`/pergunta/buscarTodasPergunta/`).then(
     res => {

@@ -27,11 +27,12 @@ idPontuacao int primary key auto_increment,
 pontuacao int,
 fkUsuario int,
 foreign key(fkUsuario) references usuario(idUsuario),
-tempoDecorrido time
+tempoDecorrido time,
+acerto int
 );
 
 
-select * from usuarioSeguidor;
+select * from usuario;
 
 create table pergunta(
 idPergunta int primary key auto_increment,
@@ -93,15 +94,22 @@ insert into alternativa values
 (default, "Henry", 10),
 (default, "Buffon",10);
 
-select * from pergunta;
+delete from usuario where idUsuario = 1;
 
-SELECT * FROM alternativa WHERE fkPergunta = 1;
+select * from pontuacao order by pontuacao.pontuacao desc;
+select * from usuarioSeguidor join pontuacao on usuarioSeguidor.fkUsuarioSeguido = pontuacao.fkUsuario where fkUsuarioSeguidor = 4 order by pontuacao.pontuacao desc;
 
+SELECT * FROM usuario;
+select * from usuarioSeguidor;
 update pontuacao set pontuacao = 30000, tempoDecorrido = '00:00:01' where fkUsuario = 1;
+select usuario.idUsuario, usuario.nomeUsuario, pontuacao.pontuacao 
+    from usuario join pontuacao on pontuacao.fkUsuario = usuario.idUsuario order by pontuacao.pontuacao desc;
 
-truncate pontuacao;
+delete from pontuacao where fkUsuario = 2;
 
 drop table pontuacao;
+
+
 
 insert into pontuacao values
 (default, "30000", 2, '00:01:30'),

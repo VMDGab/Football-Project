@@ -37,17 +37,14 @@ function Verificar() {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
                 nome: nome,
                 email: email,
                 senha: password,
             })
         }).then(function (resposta) {
-
             if (resposta.ok) {
                 successModal.showModal();
-                 window.location.replace('./login.html')
+                window.location.replace('./login.html')
             } else {
                 res.text().then(text => {
                     modal.showModal();
@@ -60,13 +57,13 @@ function Verificar() {
             }
         })
 
-        
+
     }
     close.onclick = function () {
         modal.close()
     }
     login.onclick = function () {
         successModal.close()
-       
+
     }
 }

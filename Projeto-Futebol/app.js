@@ -20,6 +20,7 @@ var usuarioRouter = require("./src/routes/usuarios");
 var pontuacaoRouter = require("./src/routes/pontuacao");
 var perguntaRouter = require("./src/routes/pergunta");
 var alternativaRouter = require("./src/routes/alternativa");
+var seguidorRouter = require("./src/routes/seguidor");
 
 
 app.use(express.json());
@@ -33,6 +34,7 @@ app.use("/usuarios", usuarioRouter);
 app.use("/pontuacao", pontuacaoRouter);
 app.use("/pergunta", perguntaRouter);
 app.use("/alternativa", alternativaRouter);
+app.use("/seguidor", seguidorRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`
