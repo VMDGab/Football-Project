@@ -120,7 +120,33 @@ function seguir(res) {
         console.log(erro);
     })
 }
-
+function seguindo() {
+    rankingHeader.innerHTML = `
+    <span class="title">Pessoas seguidas</span>
+    <button class="btnFollow" onclick='rankingGeral()'>Geral</button>
+    `
+    ranking.innerHTML = ''
+    fetch(`/seguidor/buscarRankingSeguidor/${idUsuario}`).then(
+        res => {
+            res.json().then(res => {
+                console.log(res)
+                for (i = 0; i <= res.length; i++) {
+                    console.log(res[i].idUsuario)
+                    ranking.innerHTML += `
+                        <div class="player">
+                        <div class="positionPlayer">
+                            <span class="position">${i + 1}°</span>
+                            <span class="namePlayer">${res[i].nomeUsuario}</span>
+                        </div>
+                        <span class="points">${res[i].pontuacao}</span>
+                        <button class="follow following" value='${res[i].idUsuario}' onclick='deixarSeguir(this)'>Seguindo</button>
+                        </div>`
+                }
+            })
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+}
 function deixarSeguir(res) {
     res.textContent = "Seguir"
     res.setAttribute('onclick', 'seguir(this)')
@@ -139,31 +165,7 @@ function deixarSeguir(res) {
     })
 }
 
-function seguindo() {
-    rankingHeader.innerHTML = `
-    <span class="title">Pessoas seguidas</span>
-    <button class="btnFollow" onclick='rankingGeral()'>Geral</button>
-    `
-    ranking.innerHTML = ''
-    fetch(`/seguidor/buscarRankingSeguidor/${idUsuario}`).then(
-        res => {
-            res.json().then(res => {
-                for (i = 0; i <= res.length; i++) {
-                    ranking.innerHTML += `
-                        <div class="player">
-                        <div class="positionPlayer">
-                            <span class="position">${i + 1}°</span>
-                            <span class="namePlayer">${res[i].nomeUsuario}</span>
-                        </div>
-                        <span class="points">${res[i].pontuacao}</span>
-                        <button class="follow following">Seguindo</button>
-                        </div>`
-                }
-            })
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-}
+
 function rankingGeral() {
     ranking.innerHTML = ''
     rankingHeader.innerHTML = `

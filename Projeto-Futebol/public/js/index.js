@@ -116,10 +116,10 @@ function changeNav() {
 }
 
 function animate() {
-    playerPhoto.style.transform = "translateX(-1000px)"
-    overview.style.transform = "translateX(-1000px)"
-    desc.style.transform = "translateX(-1000px)"
-    stats.style.transform = "translateY(1000px)"
+    playerPhoto.style.transform = "translateX(-2000px)"
+    overview.style.transform = "translateX(-2000px)"
+    desc.style.transform = "translateX(-2000px)"
+    stats.style.transform = "translateY(2000px)"
 
     setTimeout(function () {
         playerPhoto.style.transform = "translateX(0px)"
