@@ -23,14 +23,13 @@ buscarRanking();
 
  function buscarRanking() {
     let contador = 0;
-     fetch(`/seguidor/seguindoRanking/${idUsuario}`).then(response => {
+     fetch(`/seguidor/buscarRankingSeguidor/${idUsuario}`).then(response => {
         response.json().then(response => {
-
             fetch(`/pontuacao/buscarRanking/`).then(
                 res => {
                     console.log(response)
                     res.json().then(res => {
-                        for (i = 0; i <= res.length; i++) {
+                        for (i = 0; i <= res.length -1; i++) {
                             if (res[i].idUsuario == idUsuario) {
                                 ranking.innerHTML += `
                                 <div class="player">
@@ -40,7 +39,7 @@ buscarRanking();
                                 </div>
                                 <span class="points">${res[i].pontuacao}</span>
                                 </div>`
-                                contador++
+                             
                             }
                             else if (response.length > 0) {
                                if (response[contador] == undefined) {
@@ -55,7 +54,7 @@ buscarRanking();
                           </div>` 
                         
                                 }
-                                else if (res[i].idUsuario == response[contador].fkUsuarioSeguido) {
+                                else if (res[i].idUsuario == response[contador].idUsuario) {
                                     ranking.innerHTML += `
                                         <div class="player">
                                         <div class="positionPlayer">
@@ -76,12 +75,18 @@ buscarRanking();
                                     <span class="points">${res[i].pontuacao}</span>
                                     <button onclick='seguir(this)' id="btnSeguir" value='${res[i].idUsuario}' class="follow">Seguir</button>
                                 </div>`
-
-                                
                                 }
-
+                            }else {
+                                ranking.innerHTML += `
+                                <div class="player">
+                                <div class="positionPlayer">
+                                    <span class="position">${i + 1}°</span>
+                                    <span class="namePlayer">${res[i].nomeUsuario}</span>
+                                </div>
+                                <span class="points">${res[i].pontuacao}</span>
+                                <button onclick='seguir(this)' id="btnSeguir" value='${res[i].idUsuario}' class="follow">Seguir</button>
+                            </div>`
                             }
-                           
                         }
                     })
 

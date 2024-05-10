@@ -59,24 +59,10 @@ function seguindo(req, res) {
   );
 }
 
-function seguindoRanking(req, res) {
-  let fkUsuarioSeguidor = req.params.idUsuario;
-
-  seguidorModel.seguindoRanking(fkUsuarioSeguidor).then(
-      function (resultado) {
-          res.json(resultado);
-      }
-  ).catch(
-      function (erro) {
-          console.log(erro);
-          res.status(500).json(erro.sqlMessage);
-      }
-  );
-}
 module.exports = {
   buscarRankingSeguidor,
   seguirUsuario,
   deixarSeguirUsuario,
   seguindo,
-  seguindoRanking
+
 }

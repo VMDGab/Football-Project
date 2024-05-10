@@ -44,7 +44,7 @@ function Verificar() {
         }).then(function (resposta) {
             if (resposta.ok) {
                 successModal.showModal();
-                window.location.replace('./login.html')
+                
             } else {
                 res.text().then(text => {
                     modal.showModal();
@@ -64,6 +64,6 @@ function Verificar() {
     }
     login.onclick = function () {
         successModal.close()
-
+        window.location.replace('./login.html')
     }
 }

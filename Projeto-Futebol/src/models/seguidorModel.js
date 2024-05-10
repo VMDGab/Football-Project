@@ -1,7 +1,9 @@
 var database = require("../database/config");
 
 function buscarRankingSeguidor(fkUsuario){
-  var instrucaoSql = `select usuario.idUsuario, usuario.nomeUsuario, pontuacao.pontuacao from usuario join pontuacao join usuarioSeguidor on fkUsuario = idUsuario and fkUsuarioSeguido = idUsuario and fkUsuarioSeguidor = ${fkUsuario}; `;
+  var instrucaoSql = `select usuario.idUsuario, usuario.nomeUsuario, pontuacao.pontuacao from usuario 
+  join pontuacao join usuarioSeguidor on fkUsuario = idUsuario and fkUsuarioSeguido = idUsuario 
+  and fkUsuarioSeguidor = ${fkUsuario} order by pontuacao.pontuacao desc; `;
 
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
@@ -30,19 +32,10 @@ function seguindo(fkUsuarioSeguidor){
   return database.executar(instrucaoSql);
 }
 
-function seguindoRanking(fkUsuarioSeguidor){
-  var instrucaoSql = `select * from usuarioSeguidor join pontuacao on usuarioSeguidor.fkUsuarioSeguido = pontuacao.fkUsuario where fkUsuarioSeguidor = ${fkUsuarioSeguidor} order by pontuacao.pontuacao desc; `;
-
-  console.log("Executando a instrução SQL: \n" + instrucaoSql);
-  return database.executar(instrucaoSql);
-}
-
-
-
 module.exports = {
   buscarRankingSeguidor,
   seguirUsuario,
   deixarSeguirUsuario,
   seguindo,
-  seguindoRanking
+ 
 }
