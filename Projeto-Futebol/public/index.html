@@ -17,9 +17,9 @@
             <a href="#Inicio"><img src="./assets/Logo.png" class="logo"></a>
 
             <ul class="nav-list">
-                <li class="nav-list-item"><a href="#Historia" class="nav-links">A história</a></li>
+                <li class="nav-list-item"><a href="#Historia" class="nav-links">Histórias</a></li>
                 <li class="nav-list-item"><a href="#Clubes" class="nav-links">Clubes</a>
-                <li class="nav-list-item"><a href="#Lendas" class="nav-links">As Lendas</a></li>
+                <li class="nav-list-item"><a href="#Lendas" class="nav-links">Lendas</a></li>
                 <li class="nav-list-item"><a href="#quiz" class="nav-links">Quiz</a></li>
                 <li class="nav-list-item"><a href="#dev" class="nav-links">Desenvolvedor</a></li>
             </ul>
@@ -56,12 +56,12 @@
                 <div class="textDiv">
                     <p class="mainText" data-aos="fade-right">Quase todas as culturas do mundo possuem alguma referência
                         ao<span class="red">futebol.</span>
-                        Chineses, japoneses, italianos, gregos antigos, persas, vikings e muitos 
-                        outros povos já jogavam algum tipo de jogo de bola em tempos muitos distantes. 
+                        Chineses, japoneses, italianos, gregos antigos, persas, vikings e muitos
+                        outros povos já jogavam algum tipo de jogo de bola em tempos muitos distantes.
                         Porém, foi na <span class="red">Inglaterra</span> que o futebol realmente começou a tomar forma.
-                        Tudo começou em 1863, quando duas associações de jogos de bola se 
-                        separaram, porque os partidários do "rugby" não aceitavam um jogo em que 
-                        era proibido segurar a bola com as mãos. E isso acabou dando origem à 
+                        Tudo começou em 1863, quando duas associações de jogos de bola se
+                        separaram, porque os partidários do "rugby" não aceitavam um jogo em que
+                        era proibido segurar a bola com as mãos. E isso acabou dando origem à
                         <span class="red">The English Football Association</span>, primeira associação inglesa de
                         futebol.
                     </p>
@@ -148,46 +148,34 @@
         </div>
     </div>
     <div id="Clubes">
-        <div class="aboutClub">
+        <div id="aboutClub" class="aboutClub">
             <div class=" clubDescription" data-aos="fade-right" data-aos-duration="1200">
-                <span class="clubName">REAL MADRID</span>
-                <span class="mainText">O Real Madrid Club de Fútbol, comumente conhecido como Real Madrid, é um dos
-                    clubes
-                    de futebol
-                    mais famosos e bem-sucedidos do mundo. Com sede em Madrid, Espanha, o clube foi fundado em 1902 e
-                    desde
-                    então
-                    construiu uma história rica e repleta de conquistas. <br>
-                    Ao longo dos anos, o Real Madrid atraiu alguns dos maiores talentos do futebol, incluindo lendas
-                    como
-                    Alfredo Di Stéfano, Ferenc Puskás, Cristiano Ronaldo e muitos outros. Sua rivalidade com o
-                    Barcelona,
-                    conhecida como "El Clásico", é uma das mais intensas e famosas do mundo do esporte.
-                </span>
+                <span id="nameClub" class="clubName"></span>
+                <span id="descClub" class="mainText"></span>
             </div>
-            <img src="./assets/clubes/realMadrid.svg" class="clubeImage" data-aos="fade-right" data-aos-duration="1200">
+            <img id="imageClub" class="clubeImage" data-aos="fade-right" data-aos-duration="1200">
         </div>
         <div class="clubFooter">
-        <button class="btnClube" onclick="previouslyClub()">ANTERIOR</button>
-        <div class="clubStats" data-aos="fade-up" data-aos-duration="1200">
-            <div id="international" class="statDiv">
-                <div class="stat">
-                    <span class="qtdTitulos">14</span>
-                    <span class="titulo">Champions</span>
+            <button class="btnClube" onclick="previouslyClub()">ANTERIOR</button>
+            <div id="clubStats" class="clubStats" data-aos="fade-up" data-aos-duration="1200">
+                <div id="international" class="statDiv">
+                    <div class="stat">
+                        <span id="interQtd" class="qtdTitulos"></span>
+                        <span id="nomeTituloInter" class="titulo"></span>
+                    </div>
+                    <img src="./assets/champions.svg" style="margin-right: 30px">
                 </div>
-                <img src="./assets/champions.svg" style="margin-right: 30px">
-            </div>
-            <div id="national" class="statDiv">
-                <div class="stat">
-                    <span class="qtdTitulos">36</span>
-                    <span class="titulo">LaLiga</span>
+                <div id="national" class="statDiv">
+                    <div class="stat">
+                        <span id="nacionalQtd" class="qtdTitulos"></span>
+                        <span id="nomeTituloNacional" class="titulo"></span>
+                    </div>
+                    <img src="./assets/liga.svg" style="margin-right: 30px;">
                 </div>
-                <img src="./assets/liga.svg" style="margin-right: 30px;">
+
             </div>
-            
+            <button class="btnClube" onclick="nextClub()">PRÓXIMO</button>
         </div>
-        <button class="btnClube" onclick="nextClub()">PRÓXIMO</button>
-    </div>
     </div>
     <div id="Lendas">
         <img id="playerPhoto" class="playerSvg">
@@ -299,5 +287,6 @@
 <script>
     AOS.init();
 </script>
+<script src="./js/clubes.js"></script>
 <script src="./js/player.js"></script>
 <script src="./js/index.js"></script>

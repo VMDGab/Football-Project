@@ -23,6 +23,7 @@ body {
 
     height: 200px;
     z-index: 1;
+    position: absolute;
 }
 
 .logo {
@@ -77,9 +78,10 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin-top: 10%;
     width: 100%;
-    height: 87vh;
+    height: 80%;
+    align-items: center;
 }
 
 .stats {
@@ -187,11 +189,10 @@ body {
     align-items: center;
     margin-top: 20px;
     overflow-y: auto;
-    height: 62%;
+    height: 60%;
     scrollbar-color: #EB6C29 #ffffffe1;
     scrollbar-width: thin;
-    scroll-behavior: smooth;
-    overscroll-behavior: smooth;
+
 }
 
 .follow {
