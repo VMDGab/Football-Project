@@ -215,7 +215,9 @@ body::-webkit-scrollbar-thumb {
     align-items: flex-end;
 
 }
-
+.textDiv{
+    width: 60%;
+}
 .Title {
     font-family: "Exo 2";
     font-weight: 700;
@@ -247,8 +249,9 @@ body::-webkit-scrollbar-thumb {
 .mainText {
     font-family: "Exo 2";
     font-weight: 700;
-    font-size: 20px;
+    font-size: 22px;
     color: #292929;
+    text-align: justify;
 }
 
 .red {
@@ -355,7 +358,7 @@ body::-webkit-scrollbar-thumb {
 
  .btn:hover:before {
     width: 100%;
-    background-color:  #ff7429ac;
+    background-color:  #ff742981;
 }
 
 .btn:hover svg {
@@ -365,7 +368,88 @@ body::-webkit-scrollbar-thumb {
 .btn:active {
     transform: scale(0.95);
 }
-
+#Clubes{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.aboutClub{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.clubDescription{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+.clubName{
+    font-family: "Exo 2";
+    font-size: 90px;
+    font-weight: 900;
+    color: #ffb800;
+    margin-bottom: 20px;
+}
+.clubeImage{
+    height:80%;
+}
+.clubStats{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+.statDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    height: 100px;
+    background-color: #F5F5F5;
+    z-index: 1;
+    margin: 15px;
+    border-radius: 8px;
+    border: #E79118 6px solid;
+}
+.stat{
+    font-family: "Exo 2";
+    font-size: 30px;
+    font-weight: 900;
+    margin-left: 30px;
+    color: #292929;
+}
+.qtdTitulos{
+    color: #E79118;
+    font-size: 40px;
+}
+.btnClube{
+    background-color: #292929;
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 40px;
+    margin: 20px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    z-index: 2;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+.clubFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+}
 #Lendas{
     width: 100%;
    height: 100vh;

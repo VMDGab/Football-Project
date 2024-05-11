@@ -17,10 +17,9 @@
             <a href="#Inicio"><img src="./assets/Logo.png" class="logo"></a>
 
             <ul class="nav-list">
-                <li class="nav-list-item"><a href="#Historia" class="nav-links">A história
-                    </a></li>
-                <li class="nav-list-item"><a href="#Lendas" class="nav-links">As Lendas</a>
-                </li>
+                <li class="nav-list-item"><a href="#Historia" class="nav-links">A história</a></li>
+                <li class="nav-list-item"><a href="#Clubes" class="nav-links">Clubes</a>
+                <li class="nav-list-item"><a href="#Lendas" class="nav-links">As Lendas</a></li>
                 <li class="nav-list-item"><a href="#quiz" class="nav-links">Quiz</a></li>
                 <li class="nav-list-item"><a href="#dev" class="nav-links">Desenvolvedor</a></li>
             </ul>
@@ -54,33 +53,37 @@
             <p class="Title">A Origem</p>
             <div class="capitulo" id="origem">
                 <img class="images" data-aos="zoom-in-right" src="./assets/China.jpg">
-                <p class="mainText" data-aos="fade-right">Quase todas as culturas do mundo possuem alguma referência ao
-                    <span class="red">futebol.</span><br>
-                    Chineses, japoneses, italianos, gregos antigos, persas, vikings e muitos <br>
-                    outros povos já jogavam algum tipo de jogo de bola em tempos muitos distantes. <br>
-                    Porém, foi na <span class="red">Inglaterra</span> que o futebol realmente começou a tomar forma.
-                    <br>
-                    Tudo começou em 1863, quando duas associações de jogos de bola se <br>
-                    separaram, porque os partidários do "rugby" não aceitavam um jogo em que <br>
-                    era proibido segurar a bola com as mãos. E isso acabou dando origem à <br>
-                    <span class="red">The English Football Association</span>, primeira associação inglesa de futebol.
-                </p>
+                <div class="textDiv">
+                    <p class="mainText" data-aos="fade-right">Quase todas as culturas do mundo possuem alguma referência
+                        ao<span class="red">futebol.</span>
+                        Chineses, japoneses, italianos, gregos antigos, persas, vikings e muitos 
+                        outros povos já jogavam algum tipo de jogo de bola em tempos muitos distantes. 
+                        Porém, foi na <span class="red">Inglaterra</span> que o futebol realmente começou a tomar forma.
+                        Tudo começou em 1863, quando duas associações de jogos de bola se 
+                        separaram, porque os partidários do "rugby" não aceitavam um jogo em que 
+                        era proibido segurar a bola com as mãos. E isso acabou dando origem à 
+                        <span class="red">The English Football Association</span>, primeira associação inglesa de
+                        futebol.
+                    </p>
+                </div>
             </div>
         </div>
 
         <div class="content right">
             <p class="Title">A Copa do mundo</p>
             <div class="capitulo" id="CopaDoMundo">
-                <p class="mainText" data-aos="fade-left">A história da Copa do Mundo de futebol começa em 1928 quando o
-                    <br>
-                    francês <span class="red">Jules Rimet</span> assume o comando da Federação Internacional de <br>
-                    Futebol (FIFA) e começa a organizar a primeira competição de futebol mundial.<br>
-                    A estreia do evento aconteceu em 1930 no Uruguai e contou com a <br>
-                    participação de 13 seleções convidadas. Argentina, Bélgica, Brasil, <br>
-                    Bolívia, Chile, Estados Unidos, França, Iugoslávia, México, Paraguai, <br>
-                    Peru, Romênia, Uruguai.
+                <div class="textDiv">
+                    <p class="mainText" data-aos="fade-left">
+                        A história da Copa do Mundo de futebol começa em 1928 quando o
+                        francês <span class="red">Jules Rimet</span> assume o comando da Federação Internacional de
+                        Futebol (FIFA) e começa a organizar a primeira competição de futebol mundial.
+                        A estreia do evento aconteceu em 1930 no Uruguai e contou com a
+                        participação de 13 seleções convidadas. Argentina, Bélgica, Brasil,
+                        Bolívia, Chile, Estados Unidos, França, Iugoslávia, México, Paraguai,
+                        Peru, Romênia, Uruguai.
 
-                </p>
+                    </p>
+                </div>
                 <img class="images" data-aos="zoom-in-left" src="./assets/uruguai1930.jpg   ">
             </div>
         </div>
@@ -143,6 +146,48 @@
                 <img class="johan" data-aos="fade-left" src="./assets/johan.svg">
             </div>
         </div>
+    </div>
+    <div id="Clubes">
+        <div class="aboutClub">
+            <div class=" clubDescription" data-aos="fade-right" data-aos-duration="1200">
+                <span class="clubName">REAL MADRID</span>
+                <span class="mainText">O Real Madrid Club de Fútbol, comumente conhecido como Real Madrid, é um dos
+                    clubes
+                    de futebol
+                    mais famosos e bem-sucedidos do mundo. Com sede em Madrid, Espanha, o clube foi fundado em 1902 e
+                    desde
+                    então
+                    construiu uma história rica e repleta de conquistas. <br>
+                    Ao longo dos anos, o Real Madrid atraiu alguns dos maiores talentos do futebol, incluindo lendas
+                    como
+                    Alfredo Di Stéfano, Ferenc Puskás, Cristiano Ronaldo e muitos outros. Sua rivalidade com o
+                    Barcelona,
+                    conhecida como "El Clásico", é uma das mais intensas e famosas do mundo do esporte.
+                </span>
+            </div>
+            <img src="./assets/clubes/realMadrid.svg" class="clubeImage" data-aos="fade-right" data-aos-duration="1200">
+        </div>
+        <div class="clubFooter">
+        <button class="btnClube" onclick="previouslyClub()">ANTERIOR</button>
+        <div class="clubStats" data-aos="fade-up" data-aos-duration="1200">
+            <div id="international" class="statDiv">
+                <div class="stat">
+                    <span class="qtdTitulos">14</span>
+                    <span class="titulo">Champions</span>
+                </div>
+                <img src="./assets/champions.svg" style="margin-right: 30px">
+            </div>
+            <div id="national" class="statDiv">
+                <div class="stat">
+                    <span class="qtdTitulos">36</span>
+                    <span class="titulo">LaLiga</span>
+                </div>
+                <img src="./assets/liga.svg" style="margin-right: 30px;">
+            </div>
+            
+        </div>
+        <button class="btnClube" onclick="nextClub()">PRÓXIMO</button>
+    </div>
     </div>
     <div id="Lendas">
         <img id="playerPhoto" class="playerSvg">
