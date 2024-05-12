@@ -22,6 +22,13 @@ foreign key(fkUsuarioSeguido) references usuario(idUsuario),
 foreign key(fkUsuarioSeguidor) references usuario(idUsuario)
 );
 
+create table notificacao(
+idNotificacao int primary key auto_increment,
+mensagem varchar(200) not null,
+fkUsuario int,
+foreign key(fkUsuario) references usuario(idUsuario)
+);
+
 create table pontuacao(
 idPontuacao int primary key auto_increment,
 pontuacao int,
@@ -109,8 +116,15 @@ delete from pontuacao where fkUsuario = 2;
 
 drop table pontuacao;
 
-
+select * from usuarioSeguidor where fkUsuarioSeguido = 7;
 
 insert into pontuacao values
 (default, "30000", 2, '00:01:30'),
 (default, "38000", 1, '00:00:30');
+
+insert into notificacao values
+(default, "usuario y fez 40000 pontos", 6);
+
+
+
+select mensagem from notificacao where fkUsuario = 1; 
