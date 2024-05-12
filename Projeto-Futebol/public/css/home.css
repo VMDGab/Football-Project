@@ -1,43 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
-   margin: 0;
- }
+body {
+    margin: 0;
+}
 
-#content{
+#page {
 
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.500) 35%, rgba(41, 41, 41, 0.500) 100%), url(../../assets/background.svg);
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     margin: 0;
     background-size: cover;
     display: flex;
-    flex-direction: column;
     align-items: center;
- 
+
 }
 
-.menu{
+.userArea {
+    width: 40%;
+    height: 100%;
+    background-color: #292929d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcomeMessage {
+    font-family: "Exo 2";
+    font-weight: 900;
+    color: #E79118;
+    font-size: 36px;
+}
+
+.notificacaoDiv {
+    width: 70%;
+    height: 50%;
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Exo 2";
+    color: #FFF;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.notificacao {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 6px;
+
+    border-bottom: 2px solid #FFF;
+}
+
+.mensagem {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.textWrapper {
+    width: 70%;
+}
+
+.btnNotificacao {
+    width: 34%;
+    height: 34px;
+    border: #E79118 2px solid;
+    border-radius: 4px;
+    font-family: "Exo 2";
+    color: #E79118;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-   
-    height: 200px;
-    z-index: 1;
+    width: 100%;
 }
-.content{
-    width: 100%;    
-    height: 100vh;
+
+.gameArea {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.content {
+
     display: flex;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
 }
 
-.options{
-    position: absolute;
+.options {
     width: 500px;
     height: 400px;
     background-color: #29292990;
@@ -49,8 +118,8 @@ body{
     margin-top: 5%;
 }
 
-.btn{
-    width: 350px;
+.btn {
+    width: 300px;
     height: 60px;
     border-radius: 10px;
     border: solid 3px #EB6C29;
@@ -59,7 +128,7 @@ body{
     font-weight: 900;
     font-style: italic;
     color: #EB6C29;
-    font-size: 22px;
+    font-size: 20px;
     box-shadow: #292929 4px 6px 10px;
     transition: all .5s ease-in-out;
     position: relative;
@@ -68,41 +137,38 @@ body{
 
 
 
-.btn:active{
+.btn:active {
     transform: scale(.9);
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #EB6C29;
     color: #F5F5F5;
 }
 
 .logo {
-
-    height: 300px;
-    width: 300px;
-    margin-right: 1000px;
+    height: 250px;
+    width: 250px;
 }
 
-.menuOptions{
+.menuOptions {
     display: flex;
-    width: 500px;   
+    width: 500px;
     height: 80px;
     align-items: center;
     justify-content: space-around;
     background-color: #29292965;
     border-radius: 10px;
-    position: absolute;
 }
 
-.option{
+.option {
     font-family: "Exo 2";
     font-weight: 900;
     font-style: italic;
     color: #F5F5F5;
-    font-size: 28px;
+    font-size: 24px;
     text-decoration: none;
-    width: 45%;
+    width: 40%;
     border-radius: 10px;
     height: 60px;
     display: flex;
@@ -110,37 +176,39 @@ body{
     justify-content: center;
     transition: all .5s ease-in-out;
     z-index: 1;
-    
+
 }
-.option:hover{
+
+.option:hover {
     background-color: #EB6C29;
 }
 
-#instrucoes{
+#instrucoes {
     width: 40%;
-    height: 40%; 
+    height: 40%;
     background-color: #F5F5F5;
     border: solid 6px #EB6C29;
     border-radius: 10px;
 }
 
-#instrucoes::backdrop{
+#instrucoes::backdrop {
     background-color: #292929a6;
 }
 
-@keyframes modalAnimation{
-  0% {
-    opacity: 0;
-    transform: translateY(-5px);
-    
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes modalAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.modal{
+.modal {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,21 +219,23 @@ body{
     font-weight: 700;
     color: #292929;
     font-size: 20px;
-   
-  
+
+
 }
-dialog[open]{
+
+dialog[open] {
     animation: modalAnimation;
     transition: all .5s ease forwards;
-} 
+}
 
-.ModalTitle{
+.ModalTitle {
     font-family: "Exo 2";
     font-weight: 900;
     color: #EB6C29;
     font-size: 28px;
 }
-.btnModal{
+
+.btnModal {
     width: 150px;
     height: 40px;
     border-radius: 10px;
@@ -183,19 +253,20 @@ dialog[open]{
 
 
 
-.btnModal:active{
+.btnModal:active {
     transform: scale(.9);
 }
 
-.btnModal:hover{
+.btnModal:hover {
     background-color: #292929;
     color: #F5F5F5;
 }
 
-.logout{
+.logout {
     transition: all .5s ease-in-out;
     cursor: pointer;
 }
-.logout:active{
+
+.logout:active {
     transform: scale(.9);
 }

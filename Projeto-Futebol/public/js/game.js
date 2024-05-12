@@ -118,7 +118,7 @@ function endGame() {
 
     clearInterval(timer)
     numQuestao.textContent = "FIM DE JOGO"
-    let msg = `${nomeUsuario} fez ${pontuacaoUsuario}` 
+    let msg = `${nomeUsuario} fez ${pontuacaoUsuario} pontos` 
     pergunta.textContent = `Você fez ${pontuacaoUsuario} pontos acertando ${acertos} de ${nQuestao} questões`
 
     fetch(`/pontuacao/buscarPontuacaoUsuario/${idUsuario}`).then(

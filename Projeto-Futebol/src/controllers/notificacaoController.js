@@ -8,7 +8,15 @@ function inserirNotificacao(req, res) {
       res.status(200).json(resultado);
     });
   }
+  function buscarNotificacao(req, res) {
+    var fkUsuario = req.params.idUsuario;
+  
+    notificacaoModel.buscarNotificacao(fkUsuario).then((resultado) => {
+      res.status(200).json(resultado);
+    });
+  }
 
 module.exports = {
-    inserirNotificacao
+    inserirNotificacao,
+    buscarNotificacao
 }
