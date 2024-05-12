@@ -31,11 +31,17 @@ function seguindo(fkUsuarioSeguidor){
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
 }
+function seguidores(fkUsuarioSeguido){
+  var instrucaoSql = `select * from usuarioSeguidor where fkUsuarioSeguido = ${fkUsuarioSeguido}; `;
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
 
 module.exports = {
   buscarRankingSeguidor,
   seguirUsuario,
   deixarSeguirUsuario,
   seguindo,
- 
+  seguidores
 }

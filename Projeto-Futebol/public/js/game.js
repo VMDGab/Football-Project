@@ -1,5 +1,5 @@
 const idUsuario = sessionStorage.ID_USUARIO
-
+const nomeUsuario = sessionStorage.NOME_USUARIO
 let numQuestao = document.querySelector('#numQuestao')
 let pergunta = document.querySelector('#pergunta')
 
@@ -50,7 +50,6 @@ fetch(`/pergunta/buscarPergunta/1`).then(res => {
 
 fetch(`/alternativa/buscarAlternativa/1`).then(res => {
     res.json().then(res => {
-        console.log(res)
         a.textContent = `${res[0].descricao}`
         b.textContent = `${res[1].descricao}`
         c.textContent = `${res[2].descricao}`
@@ -64,7 +63,6 @@ function checkAnswer(resposta) {
     fetch(`/pergunta/buscarPergunta/${nQuestao + 1}`).then(res => {
         let respostaUsuario = resposta.textContent
         res.json().then(res => {
-            console.log(res);
             let respostaCorreta = res[0].resposta
             if (respostaUsuario == respostaCorreta) {
                 pontuacaoUsuario += res[0].valor
@@ -75,22 +73,21 @@ function checkAnswer(resposta) {
         console.log(erro);
     })
     setTimeout(function () {
-        
-fetch(`/pergunta/buscarTodasPergunta/`).then(
-    res => {
-    res.json().then(res => {
-        console.log(res)
-     nQuestao = nQuestao + 1
-        if (nQuestao > res.length - 1) {
-            endGame()
-        } else {
-            nextQuestion(nQuestao)
-        }
-    })
-}).catch(function (erro) {
-    console.log(erro);
-})
-        
+
+        fetch(`/pergunta/buscarTodasPergunta/`).then(
+            res => {
+                res.json().then(res => {
+                    nQuestao = nQuestao + 1
+                    if (nQuestao > res.length - 1) {
+                        endGame()
+                    } else {
+                        nextQuestion(nQuestao)
+                    }
+                })
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+
 
     }, 300)
 }
@@ -99,7 +96,6 @@ function nextQuestion(nQuestao) {
     numQuestao.textContent = nQuestao + 1
     fetch(`/pergunta/buscarPergunta/${nQuestao + 1}`).then(res => {
         res.json().then(res => {
-            console.log(res);
             pergunta.textContent = `${res[0].descricao}`
         })
     }).catch(function (erro) {
@@ -121,9 +117,8 @@ function nextQuestion(nQuestao) {
 function endGame() {
 
     clearInterval(timer)
-    console.log(time)
     numQuestao.textContent = "FIM DE JOGO"
-
+    let msg = `${nomeUsuario} fez ${pontuacaoUsuario}` 
     pergunta.textContent = `Você fez ${pontuacaoUsuario} pontos acertando ${acertos} de ${nQuestao} questões`
 
     fetch(`/pontuacao/buscarPontuacaoUsuario/${idUsuario}`).then(
@@ -138,7 +133,7 @@ function endGame() {
                         body: JSON.stringify({
                             pontuacao: pontuacaoUsuario,
                             time: time,
-                            acerto : acertos
+                            acerto: acertos
                         })
                     }).catch(function (erro) {
                         console.log(erro);
@@ -152,7 +147,7 @@ function endGame() {
                         body: JSON.stringify({
                             pontuacao: pontuacaoUsuario,
                             time: time,
-                            acerto : acertos
+                            acerto: acertos
                         })
                     }).catch(function (erro) {
                         console.log(erro);
@@ -161,6 +156,30 @@ function endGame() {
             })
         }
     )
+    fetch(`/seguidor/seguidores/${idUsuario}`).then(res => {
+        res.json().then(res => {
+            const seguidores = res
+
+            for(i = 0; i <= seguidores.length; i++){
+                fetch(`/notificacao/inserirNotificacao/`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    mensagem: msg,
+                    fkUsuario: seguidores[i].fkUsuarioSeguidor,
+                    })
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+            }
+            
+
+        })
+    }).catch(function (erro) {
+        console.log(erro);
+    })
 
 
 

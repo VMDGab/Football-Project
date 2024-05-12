@@ -15,4 +15,7 @@ router.delete(`/deixarSeguirUsuario/:idUsuario`, function (req, res) {
 router.get(`/seguindo/:idUsuario`, function (req, res) {
   seguidorController.seguindo(req, res);
 })
+router.get("/seguidores/:idUsuario", function (req, res) {
+  seguidorController.seguidores(req, res);
+});
 module.exports = router;
