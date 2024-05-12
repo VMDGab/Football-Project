@@ -216,37 +216,40 @@ body {
     opacity: 0;
 }
 
-.modal{
-border: 6px solid #E96A27;
-border-radius: 20px ;
+.modal {
+    background-color: #292929;
+    border: 6px solid #E96A27;
 
-width: 36%;
-height: 42%;
-box-shadow: #292929 0 6px 10px;
+    width: 36%;
+    height: 44%;
+    box-shadow: #292929 0 6px 10px;
 }
-.dialog{
+
+.dialog {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#error::backdrop{
-    background-color: #29292997;
+#error::backdrop {
+    background-color: #292929d6;
 }
-.ErrorModal{
+
+.ErrorModal {
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 40px;
     color: #E96A27;
 }
-#msgError{
+
+#msgError {
     font-family: "Exo 2";
     font-weight: 500;
     font-size: 24px;
     color: #E96A27;
 }
 
-.btnModal{
+.btnModal {
     background: linear-gradient(0.40turn, #8F2626, #E96A27);
     height: 40px;
     width: 150px;
@@ -261,25 +264,19 @@ box-shadow: #292929 0 6px 10px;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    margin-top: 6%;    
+    margin-top: 6%;
     cursor: pointer;
 }
 
 
-.successModal{
+.successModal {
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 40px;
     color: #E96A27;
 }
-#msgSucess{
-    font-family: "Exo 2";
-    font-weight: 500;
-    font-size: 24px;
-    color: #292929;
-    text-align: center;
-}
-#msg{
+
+#msgSucess {
     font-family: "Exo 2";
     font-weight: 500;
     font-size: 24px;
@@ -287,20 +284,28 @@ box-shadow: #292929 0 6px 10px;
     text-align: center;
 }
 
-@keyframes fadein{
+#msg {
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 30px;
+    color: #FFF;
+    text-align: center;
+}
+
+@keyframes fadein {
     0% {
-        
-        
+
+
         transform: translateY(-5px);
-        }
+    }
 
     100% {
-      opacity: 1;
-      transform: translateY(0);
-     
+        opacity: 1;
+        transform: translateY(0);
+
     }
 }
 
-dialog[open]{
+dialog[open] {
     animation: fadein .5s ease forwards;
 }

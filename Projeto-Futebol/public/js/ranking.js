@@ -49,8 +49,8 @@ buscarRanking();
                                 <span class="position">${i + 1}°</span>
                                 <span class="namePlayer">${res[i].nomeUsuario}</span>
                             </div>
-                            <span class="points">${res[i].pontuacao}</span>
                             <button onclick='seguir(this)' id="btnSeguir" value='${res[i].idUsuario}' class="follow">Seguir</button>
+                            <span class="points">${res[i].pontuacao}</span>
                           </div>` 
                         
                                 }
@@ -61,8 +61,8 @@ buscarRanking();
                                             <span class="position">${i + 1}°</span>
                                             <span class="namePlayer">${res[i].nomeUsuario}</span>
                                         </div>
-                                        <span class="points">${res[i].pontuacao}</span>
                                         <button onclick='deixarSeguir(this)' id="btnSeguir" value='${res[i].idUsuario}' class="follow following">Seguindo</button>
+                                        <span class="points">${res[i].pontuacao}</span>
                                     </div>`
                                     contador++
                                 }else {
@@ -72,8 +72,8 @@ buscarRanking();
                                         <span class="position">${i + 1}°</span>
                                         <span class="namePlayer">${res[i].nomeUsuario}</span>
                                     </div>
-                                    <span class="points">${res[i].pontuacao}</span>
                                     <button onclick='seguir(this)' id="btnSeguir" value='${res[i].idUsuario}' class="follow">Seguir</button>
+                                    <span class="points">${res[i].pontuacao}</span>
                                 </div>`
                                 }
                             }else {
@@ -83,8 +83,8 @@ buscarRanking();
                                     <span class="position">${i + 1}°</span>
                                     <span class="namePlayer">${res[i].nomeUsuario}</span>
                                 </div>
-                                <span class="points">${res[i].pontuacao}</span>
                                 <button onclick='seguir(this)' id="btnSeguir" value='${res[i].idUsuario}' class="follow">Seguir</button>
+                                <span class="points">${res[i].pontuacao}</span>
                             </div>`
                             }
                         }
@@ -138,8 +138,8 @@ function seguindo() {
                             <span class="position">${i + 1}°</span>
                             <span class="namePlayer">${res[i].nomeUsuario}</span>
                         </div>
-                        <span class="points">${res[i].pontuacao}</span>
                         <button class="follow following" value='${res[i].idUsuario}' onclick='deixarSeguir(this)'>Seguindo</button>
+                        <span class="points">${res[i].pontuacao}</span>
                         </div>`
                 }
             })

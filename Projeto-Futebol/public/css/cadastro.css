@@ -222,9 +222,9 @@ body {
 .modal{
 border: 6px solid #E96A27;
 border-radius: 20px ;
-
+background-color: #292929;
 width: 36%;
-height: 42%;
+height: 44%;
 box-shadow: #292929 0 6px 10px;
 }
 .dialog{
@@ -244,9 +244,9 @@ box-shadow: #292929 0 6px 10px;
 }
 #msgError{
     font-family: "Exo 2";
-    font-weight: 500;
-    font-size: 24px;
-    color: #E96A27;
+    font-weight: 700;
+    font-size: 30px;
+    color: #FFF;
 }
 
 .btnModal{
@@ -277,16 +277,16 @@ box-shadow: #292929 0 6px 10px;
 }
 #msgSucess{
     font-family: "Exo 2";
-    font-weight: 500;
-    font-size: 24px;
-    color: #292929;
+    font-weight: 700;
+    font-size: 30px;
+    color: #FFF;
     text-align: center;
 }
 #msg{
     font-family: "Exo 2";
-    font-weight: 500;
-    font-size: 24px;
-    color: #292929;
+    font-weight: 700;
+    font-size: 30px;
+    color: #FFF;
     text-align: center;
 }
 
