@@ -1,4 +1,5 @@
 const idUsuario = sessionStorage.ID_USUARIO
+const nomeUsuario = sessionStorage.NOME_USUARIO
 
 const time = document.querySelector('#time')
 const userPoints = document.querySelector('#point')
@@ -106,7 +107,7 @@ function seguir(res) {
     res.textContent = "Seguindo"
     res.setAttribute('onclick', 'deixarSeguir(this)')
     res.setAttribute('class', 'follow following')
-
+    const msg = `${nomeUsuario} começou a seguir você.`
 
     fetch(`/seguidor/seguirUsuario/${idUsuario}`, {
         method: "POST",
@@ -116,6 +117,19 @@ function seguir(res) {
         body: JSON.stringify({
             usuarioSeguido: res.value,
         })
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+    fetch(`/notificacao/inserirNotificacao/${idUsuario}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            mensagem: msg,
+            usuarioNotificado: res.value,
+            })
     }).catch(function (erro) {
         console.log(erro);
     })

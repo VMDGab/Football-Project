@@ -161,14 +161,14 @@ function endGame() {
             const seguidores = res
 
             for(i = 0; i <= seguidores.length; i++){
-                fetch(`/notificacao/inserirNotificacao/`, {
+                fetch(`/notificacao/inserirNotificacao/${idUsuario}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     mensagem: msg,
-                    fkUsuario: seguidores[i].fkUsuarioSeguidor,
+                    usuarioNotificado: seguidores[i].fkUsuarioSeguidor,
                     })
             }).catch(function (erro) {
                 console.log(erro);

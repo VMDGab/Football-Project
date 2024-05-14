@@ -1,10 +1,11 @@
 var notificacaoModel = require("../models/notificacaoModel");
 
 function inserirNotificacao(req, res) {
+    var fkUsuario = req.params.idUsuario;
+    var fkUsuarioNotificado = req.body.usuarioNotificado
     var mensagem = req.body.mensagem;
-    var fkUsuario = req.body.fkUsuario;
   
-    notificacaoModel.inserirNotificacao(mensagem, fkUsuario).then((resultado) => {
+    notificacaoModel.inserirNotificacao(mensagem, fkUsuario, fkUsuarioNotificado).then((resultado) => {
       res.status(200).json(resultado);
     });
   }

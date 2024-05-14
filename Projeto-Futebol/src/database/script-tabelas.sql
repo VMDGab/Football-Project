@@ -26,7 +26,9 @@ create table notificacao(
 idNotificacao int primary key auto_increment,
 mensagem varchar(200) not null,
 fkUsuario int,
-foreign key(fkUsuario) references usuario(idUsuario)
+foreign key(fkUsuario) references usuario(idUsuario),
+fkUsuarioNotificado int,
+foreign key(fkUsuarioNotificado) references usuario(idUsuario)
 );
 
 create table pontuacao(
