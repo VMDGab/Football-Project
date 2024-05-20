@@ -23,7 +23,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .images {
-    box-shadow: #292929 -5px 7px 10px;
+    box-shadow: #F5A153 -5px 7px 10px;
     width: 400px;
 }
 
@@ -113,7 +113,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav-links:hover::after {
-    background-color: #E96A27;
+    background-color: #F5A153;
 }
 
 .presentation {
@@ -281,7 +281,7 @@ body::-webkit-scrollbar-thumb {
 .pele {
 
     height:100%;
-    box-shadow: #143C62 -3px 10px 10px;
+    box-shadow: #F5A153 -3px 4px 10px;
 }
 
 .cruyff {
@@ -632,7 +632,7 @@ body::-webkit-scrollbar-thumb {
     height: 340px;
     border-radius: 300px;
     border:#F5A153 6px solid;
-    box-shadow: #091928 0 6px 10px;
+    box-shadow: #f49c4b 0 2px 10px;
 }
 
 .about{

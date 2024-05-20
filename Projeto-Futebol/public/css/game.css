@@ -21,7 +21,7 @@ body{
 .questionNumber{
     width: 200px;
     height: 100px;
-    background-color: #EB6C29;
+    background-color: #F5A153;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +72,7 @@ body{
     height: 60px;
 
     border-radius: 10px;
-    border: #EB6C29 4px solid;
+    border: #F5A153 4px solid;
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 26px;
@@ -83,7 +83,7 @@ body{
 }
 
 .altBtn:hover{
-    background-color: #EB6C29;
+    background-color: #F5A153;
     color: #F5F5F5;
 }
 

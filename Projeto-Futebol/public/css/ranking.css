@@ -63,7 +63,7 @@ body {
 }
 
 .option:hover {
-    background-color: #EB6C29;
+    background-color: #F5A153;
 }
 
 .logout {
@@ -113,7 +113,7 @@ body {
 
 .stat {
     margin-right: 30px;
-    color: #EB6C29;
+    color: #F5A153;
     font-weight: 900;
 }
 
@@ -168,7 +168,7 @@ body {
     border: none;
     border-radius: 10px;
     color: #ffffff;
-    background-color: #EB6C29;
+    background-color: #F5A153;
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 20px;
@@ -190,7 +190,7 @@ body {
     margin-top: 20px;
     overflow-y: auto;
     height: 60%;
-    scrollbar-color: #EB6C29 #ffffffe1;
+    scrollbar-color: #F5A153 #ffffffe1;
     scrollbar-width: thin;
 
 }
@@ -198,7 +198,7 @@ body {
 .follow {
     width: 150px;
     margin-bottom: 2px;
-    border: solid 2px #EB6C29;
+    border: solid 2px #F5A153;
     background-color: #F5F5F5;
     color: #292929cc;
     border-radius: 10px;
@@ -208,7 +208,7 @@ body {
     transition: all .6s ease-in-out;
 }
 .following {
-    background-color: #EB6C29;
+    background-color: #F5A153;
     color: #f5f5f5;
   }
 
@@ -240,7 +240,7 @@ body {
 }
 
 .points {
-    color: #EB6C29;
+    color: #F5A153;
     width: 20%;
     margin-left: 20px;
 }

@@ -83,7 +83,7 @@ body {
 
 .btn:hover:before {
     width: 100%;
-    background-color: #ff7429ac;
+    background-color: #F5A153;
 }
 
 .btn:hover svg {
@@ -116,7 +116,7 @@ body {
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 64px;
-    color: #ff7429;
+    color: #F5A153;
 }
 
 .mainText {
@@ -135,7 +135,7 @@ body {
 }
 
 .login {
-    color: #ff7429;
+    color: #F5A153;
     text-decoration: none;
     cursor: pointer;
 }
@@ -220,7 +220,7 @@ body {
 }
 
 .modal{
-border: 6px solid #E96A27;
+border: 6px solid #F5A153;
 border-radius: 20px ;
 background-color: #292929;
 width: 36%;
@@ -240,7 +240,7 @@ box-shadow: #292929 0 6px 10px;
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 40px;
-    color: #E96A27;
+    color: #F5A153;
 }
 #msgError{
     font-family: "Exo 2";
@@ -273,7 +273,7 @@ box-shadow: #292929 0 6px 10px;
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 40px;
-    color: #E96A27;
+    color: #F5A153;
 }
 #msgSucess{
     font-family: "Exo 2";

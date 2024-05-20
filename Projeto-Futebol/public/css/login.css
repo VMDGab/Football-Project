@@ -83,7 +83,7 @@ body {
 
 .btn:hover:before {
     width: 100%;
-    background-color: #ff7429ac;
+    background-color: #F5A153;
 }
 
 .btn:hover svg {
@@ -114,7 +114,7 @@ body {
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 44px;
-    color: #ff7429;
+    color: #F5A153;
     text-transform: uppercase;
     text-align: center;
 }
@@ -134,7 +134,7 @@ body {
 }
 
 .cadastro {
-    color: #ff7429;
+    color: #F5A153;
     text-decoration: none;
     cursor: pointer;
 }
@@ -171,7 +171,7 @@ body {
 }
 
 .signInBtn {
-    background: linear-gradient(0.40turn, #8F2626, #E96A27);
+    background: linear-gradient(0.40turn, #e89140, #F5A153);
     height: 50px;
     width: 250px;
     border-radius: 30px;
@@ -195,7 +195,7 @@ body {
     position: absolute;
     display: flex;
 
-    background: linear-gradient(0.40turn, #E96A27, #8F2626);
+    background: linear-gradient(0.40turn, #F5A153, #e89140);
     transition: all .4s ease-in-out;
 
     height: 50px;
@@ -218,7 +218,7 @@ body {
 
 .modal {
     background-color: #292929;
-    border: 6px solid #E96A27;
+    border: 6px solid #F5A153;
 
     width: 36%;
     height: 44%;
@@ -239,18 +239,18 @@ body {
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 40px;
-    color: #E96A27;
+    color: #F5A153;
 }
 
 #msgError {
     font-family: "Exo 2";
     font-weight: 500;
     font-size: 24px;
-    color: #E96A27;
+    color: #F5A153;
 }
 
 .btnModal {
-    background: linear-gradient(0.40turn, #8F2626, #E96A27);
+    background: linear-gradient(0.40turn, #e89140, #F5A153);
     height: 40px;
     width: 150px;
     border-radius: 30px;
@@ -273,7 +273,7 @@ body {
     font-family: "Exo 2";
     font-weight: 700;
     font-size: 40px;
-    color: #E96A27;
+    color: #F5A153;
 }
 
 #msgSucess {
@@ -294,15 +294,12 @@ body {
 
 @keyframes fadein {
     0% {
-
-
         transform: translateY(-5px);
     }
 
     100% {
         opacity: 1;
         transform: translateY(0);
-
     }
 }
 
