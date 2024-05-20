@@ -42,6 +42,7 @@ const timer = setInterval(() => {
 
 fetch(`/pergunta/buscarPergunta/1`).then(res => {
     res.json().then(res => {
+        console.log(res)
         pergunta.textContent = `${res[nQuestao].descricao}`
     })
 }).catch(function (erro) {
@@ -50,6 +51,7 @@ fetch(`/pergunta/buscarPergunta/1`).then(res => {
 
 fetch(`/alternativa/buscarAlternativa/1`).then(res => {
     res.json().then(res => {
+        console.log(res)
         a.textContent = `${res[0].descricao}`
         b.textContent = `${res[1].descricao}`
         c.textContent = `${res[2].descricao}`
@@ -61,7 +63,7 @@ fetch(`/alternativa/buscarAlternativa/1`).then(res => {
 
 function checkAnswer(resposta) {
     fetch(`/pergunta/buscarPergunta/${nQuestao + 1}`).then(res => {
-        let respostaUsuario = resposta.textContent
+                let respostaUsuario = resposta.textContent
         res.json().then(res => {
             let respostaCorreta = res[0].resposta
             if (respostaUsuario == respostaCorreta) {
