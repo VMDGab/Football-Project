@@ -73,10 +73,25 @@ function seguidores(req, res) {
     );
   }
 
+  function buscarSeguidorNotificacao(req, res) {
+ 
+    let fkUsuarioSeguidor = req.params.idUsuario;
+    let fkUsuarioSeguido = req.body.fkUsuarioSeguido;
+    seguidorModel.buscarSeguidorNotificacao(fkUsuarioSeguidor, fkUsuarioSeguido).then(response => {
+        res.status(200).json(response);
+        }).catch(
+        function (erro) {
+            console.log(erro);
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+  }
+
 module.exports = {
   buscarRankingSeguidor,
   seguirUsuario,
   deixarSeguirUsuario,
   seguindo,
   seguidores,
+  buscarSeguidorNotificacao
 }

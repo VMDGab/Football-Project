@@ -18,4 +18,7 @@ router.get(`/seguindo/:idUsuario`, function (req, res) {
 router.get("/seguidores/:idUsuario", function (req, res) {
   seguidorController.seguidores(req, res);
 });
+router.get("/buscarSeguidorNotificacao/:idUsuario", function (req, res) {
+  seguidorController.buscarSeguidorNotificacao(req, res);
+});
 module.exports = router;
