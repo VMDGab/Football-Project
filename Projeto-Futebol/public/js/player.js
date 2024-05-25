@@ -52,8 +52,8 @@ const p1 = {
             posicao: "meia atacante",
             descricao: "Lionel Andrés Messi Cuccittini é um jogador argentino que atua como meia atacante. Atualmente joga pelo Inter Miami e pela Seleção Argentina, onde venceu a Copa do Mundo do Catar de 2022. Ele possui um recorde de oito premiações da Bolas de Ouro, um recorde de seis Chuteiras de Ouro, é o jogador com mais títulos oficiais na história do futebol com 44 títulos.",
             bg: "linear-gradient(180deg, #3D6DB4 0%, #1A2F4E 100%)",
-            stat: "#A2214B",
-            cor: "#EF002F",
+            stat: "#A20647",
+            cor: "#A20647",
             jogos: 1089,
             gols: 843,
             assist: 350
