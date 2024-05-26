@@ -1,5 +1,5 @@
 <div align="center">
-<img src="projeto-futebol/public/assets/quizLogo.svg" width="350em">
+<img src="./Projeto-Futebol//public/assets/quizLogo.svg" width="350em">
 </div>
 
 <br>
