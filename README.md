@@ -28,31 +28,31 @@ Este projeto foi desenvolvido com o objeto de contar um pouco sobre a história 
 
 ## 📷 Screenshots
 
-<img src="./Projeto-futebol/public/assets/screenshots/screenshot1.png" width="100%">
+<img src="Projeto-futebol/public/assets/screenshots/screenshot1.png" width="100%">
 
 <br>
 
-<img src="./Projeto-futebol/public/assets/screenshots/screenshot2.png" width="100%">
+<img src="Projeto-futebol/public/assets/screenshots/screenshot2.png" width="100%">
 
 <br>
 
-<img src="./Projeto-futebol/public/assets/screenshots/screenshot3.png" width="100%">
+<img src="Projeto-futebol/public/assets/screenshots/screenshot3.png" width="100%">
 
 <br>
 
-<img src="./Projeto-futebol/public/assets/screenshots/screenshot4.png" width="100%">
+<img src="Projeto-futebol/public/assets/screenshots/screenshot4.png" width="100%">
 
 <br>
 
-<img src="./Projeto-futebol/public/assets/screenshots/screenshot5.png" width="100%">
+<img src="Projeto-futebol/public/assets/screenshots/screenshot5.png" width="100%">
 
 <br>
 
-<img src="./Projeto-futebol/public/assets/screenshots/screenshot6.png" width="100%">
+<img src="Projeto-futebol/public/assets/screenshots/screenshot6.png" width="100%">
 
 <br>
 
-<img src="./Projeto-futebol/public/assets/screenshots/screenshot7.png" width="100%">
+<img src="Projeto-futebol/public/assets/screenshots/screenshot7.png" width="100%">
 
 <br>
 
