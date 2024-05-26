@@ -183,14 +183,12 @@ function endGame() {
         console.log(erro);
     })
 
-
-
     divQuestoes.style.display = "none"
     questionNumber.style.display = "none"
 
     setTimeout(function () {
         location.replace("../dashboard/ranking.html")
-    }, 5000)
+    }, 3000)
 }
 
 function goHome() {

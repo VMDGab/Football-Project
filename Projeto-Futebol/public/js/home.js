@@ -30,41 +30,13 @@ fetch(`/notificacao/buscarNotificacao/${idUsuario}`).then(res => {
         console.log(res)
         for (i = 0; i <= res.length; i++) {
             if (res[i].mensagem.indexOf('seguir') != -1) {
-                fetch(`/seguidor/buscarSeguidorNotificacao/${idUsuario}`, {
-                    method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        fkUsuarioSeguido: res[i].fkUsuario,
-                    })
-                }
-                ).then(
-                    response => {
-                        response.json().then(response => {
-                            if (response.length > 0) {
-                                notificacao.innerHTML += ` 
-                                <div class="notificacao">
-                                <div class="textWrapper">
-                                <span class="mensagem">${res[i].mensagem}</span>
-                                </div>
-                                <button class="btnNotificacao following" value='${res[i].fkUsuario}' onclick='deixarSeguir(this)'>Seguindo</button>
-                                </div>`
-                            }
-                            else{
-                                 notificacao.innerHTML += ` 
-                                <div class="notificacao">
-                                <div class="textWrapper">
-                                <span class="mensagem">${res[i].mensagem}</span>
-                                </div>
-                                <button class="btnNotificacao" value='${res[i].fkUsuario}' onclick='seguir(this)'>Seguir</button>
-                                </div>`
-                            }
-                        })
-                    }).catch(function (erro) {
-                        console.log(erro);
-                    })
-               
+                notificacao.innerHTML += ` 
+                    <div class="notificacao">
+                    <div class="textWrapper">
+                    <span class="mensagem">${res[i].mensagem}</span>
+                    </div>
+                    <button class="btnNotificacao" value='${res[i].fkUsuario}' onclick='seguir(this)'>Seguir</button>
+                    </div>`
             } else {
                 notificacao.innerHTML += `  
                 <div class="notificacao">
@@ -74,12 +46,10 @@ fetch(`/notificacao/buscarNotificacao/${idUsuario}`).then(res => {
             <button class="btnNotificacao" onclick="jogar(this)">Jogar</button>
             </div>
             `
-            }
-        }
-    })
-}).catch(function (erro) {
-    console.log(erro);
-})
+            }}})
+        }).catch(function (erro) {
+            console.log(erro);
+        })
 
 function jogar() {
     location.replace('/dashboard/game.html')

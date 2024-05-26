@@ -174,7 +174,7 @@ body {
 }
 
 .signUpBtn {
-    background: linear-gradient(0.40turn, #8F2626, #E96A27);
+    background: linear-gradient(0.40turn, #ff7b00, #F5A153);
     height: 50px;
     width: 250px;
     border-radius: 30px;
@@ -198,7 +198,7 @@ body {
     position: absolute;
     display: flex;
 
-    background: linear-gradient(0.40turn, #E96A27, #8F2626);
+    background: linear-gradient(0.40turn,#F5A153, #ff7b00, );
     transition: all .4s ease-in-out;
 
     height: 50px;

@@ -199,7 +199,9 @@ fetch(`/pergunta/buscarTodasPergunta/`).then(
                     console.log(response[0].acerto)
                     console.log(qtdPerguntas)
 
-                    let porcentagemAcerto = (response[0].acerto / qtdPerguntas) * 100
+                    let porcentagemAcerto = Math.round((response[0].acerto / qtdPerguntas)* 100 )
+                    console.log(porcentagemAcerto)
+
                     let porcentagemErro = 100 - porcentagemAcerto
 
                     Chart.defaults.color = "#ffffff";

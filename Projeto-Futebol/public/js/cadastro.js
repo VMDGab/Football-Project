@@ -46,7 +46,7 @@ function Verificar() {
                 successModal.showModal();
                 
             } else {
-                res.text().then(text => {
+                resposta.text().then(text => {
                     modal.showModal();
                     msgModal.innerHTML = text
                 })
