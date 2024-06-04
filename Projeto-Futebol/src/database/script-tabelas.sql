@@ -8,7 +8,7 @@ flush privileges;
 
 create table usuario(
 idUsuario int primary key auto_increment,
-nomeUsuario varchar(45),
+nomeUsuario varchar(14),
 email varchar(100) unique,
 senha varchar(20)
 );
@@ -22,15 +22,6 @@ foreign key(fkUsuarioSeguido) references usuario(idUsuario),
 foreign key(fkUsuarioSeguidor) references usuario(idUsuario)
 );
 
-create table notificacao(
-idNotificacao int primary key auto_increment,
-mensagem varchar(200) not null,
-fkUsuario int,
-foreign key(fkUsuario) references usuario(idUsuario),
-fkUsuarioNotificado int,
-foreign key(fkUsuarioNotificado) references usuario(idUsuario)
-);
-
 create table pontuacao(
 idPontuacao int primary key auto_increment,
 pontuacao int,
@@ -40,8 +31,7 @@ tempoDecorrido time,
 acerto int
 );
 
-
-select * from usuario;
+select * from usuarioSeguidor;
 
 create table pergunta(
 idPergunta int primary key auto_increment,
@@ -58,75 +48,25 @@ foreign key(fkPergunta) references pergunta(idPergunta)
 );
 
 insert into pergunta values
-(default, "Quem foi o autor do gol da final do mundial de clubes de 2006?", 3000, "Adriano Gabiru"),
-(default, "Quem perdeu o penalti decicivo na disputa de penaltis da final da copa de 1994?", 5000, "Baggio"),
-(default, "Qual seleção venceu a primeira Copa do mundo em 1930?", 5000, "Uruguai"),
-
-(default, "Qual o último time não europeu a vencer o mundial de clubes FIFA?", 3000, "Corinthians"),
-(default, "Qual seleção ficou conhecida como 'Laranja mecânica' pela sua forma de jogar na copa de 1974?", 3000, "Holanda"),
-(default, "No último lance da prorrogação da copa do mundo de 2022, um jogador perdeu um gol cara a cara com o goleiro, quem é esse jogador?", 7000, "Kolo Muani"),
-(default, "Qual jogador levou uma cabeçada na final da copa do mundo de 2006?", 7000, "Materazzi");
+(default, "Quem venceu a copa do mundo de 1970?", 3000, "Brasil"),
+(default, "Qual time possui mais titulos da Champions League?", 1000, "Real Madrid"),
+(default, "Quem é o maior artilheiro da história da Champions League?", 3000, "Cristiano Ronaldo");
 
 insert into alternativa values
-(default, "Ronaldinho Gaucho", 4),
-(default, "Fernandão", 4),
-(default, "Messi", 4),
-(default, "Adriano Gabiru", 4),
+(default, "Alemanha", 1),
+(default, "Brasil", 1),
+(default, "Mexico", 1),
+(default, "Italia", 1),
 
-(default, "Bebeto", 5),
-(default, "Baggio", 5),
-(default, "Dunga", 5),
-(default, "Zola", 5),
+(default, "Real Madrid", 2),
+(default, "Criciúma", 2),
+(default, "Milan", 2),
+(default, "Barcelona", 2),
 
-(default, "Hungria", 6),
-(default, "Uruguai", 6),
-(default, "União Soviética", 6),
-(default, "Espanha", 6),
+(default, "Henrique Dourado", 3),
+(default, "Erling Haaland", 3),
+(default, "Cristiano Ronaldo", 3),
+(default, "Xavi", 3);
 
-(default, "Corinthians", 7),
-(default, "River Plate", 7),
-(default, "Grêmio", 7),
-(default, "Indepediente Del Valle", 7),
-
-(default, "Turquia", 8),
-(default, "Argentina", 8),
-(default, "Alemanha", 8),
-(default, "Holanda", 8),
-
-(default, "Mac Allister", 9),
-(default, "Dembelé", 9),
-(default, "Kolo Muani", 9),
-(default, "Otamendi", 9),
-
-(default, "Pirlo", 10),
-(default, "Materazzi", 10),
-(default, "Henry", 10),
-(default, "Buffon",10);
-
-delete from usuario where idUsuario = 1;
-
-select * from pontuacao order by pontuacao.pontuacao desc;
-select * from usuarioSeguidor join pontuacao on usuarioSeguidor.fkUsuarioSeguido = pontuacao.fkUsuario where fkUsuarioSeguidor = 4 order by pontuacao.pontuacao desc;
-
-SELECT * FROM usuario;
-select * from usuarioSeguidor;
-update pontuacao set pontuacao = 30000, tempoDecorrido = '00:00:01' where fkUsuario = 1;
-select usuario.idUsuario, usuario.nomeUsuario, pontuacao.pontuacao 
-    from usuario join pontuacao on pontuacao.fkUsuario = usuario.idUsuario order by pontuacao.pontuacao desc;
-
-delete from pontuacao where fkUsuario = 2;
-
-drop table pontuacao;
-
-select * from usuarioSeguidor where fkUsuarioSeguido = 7;
-
-insert into pontuacao values
-(default, "30000", 2, '00:01:30'),
-(default, "38000", 1, '00:00:30');
-
-insert into notificacao values
-(default, "usuario y fez 40000 pontos", 6);
-
-
-
-select mensagem from notificacao where fkUsuario = 1; 
+select *from usuario;
+select * from usuarioSeguidor where fkUsuarioSeguidor = 1 and fkUsuarioSeguido = 12;

@@ -2,9 +2,9 @@ const c1 ={
     nome: "REAL MADRID",
     descricao: "O Real Madrid Club de Fútbol, comumente conhecido como Real Madrid, é um dos clubes de futebol mais famosos e bem-sucedidos do mundo. Com sede em Madrid, Espanha, o clube foi fundado em 1902 e desde então construiu uma história rica e repleta de conquistas. Ao longo dos anos, o Real Madrid atraiu alguns dos maiores talentos do futebol, incluindo lendas como Alfredo Di Stéfano, Ferenc Puskás, Cristiano Ronaldo e muitos outros. Sua rivalidade com o Barcelona, conhecida como 'El Clásico', é uma das mais intensas e famosas do mundo do esporte.",
     image: "./assets/clubes/realMadrid.svg",
-    interQtd: 14,
+    interQtd: 15,
     nomeTituloInter: "Champions",
-    nacionalQtd: 36,
+    nacionalQtd: 37,
     nomeTituloNacional: "LaLiga",
     color: '#FFB800'
 }
@@ -46,10 +46,21 @@ const c5 ={
     image: "./assets/clubes/milan.svg",
     interQtd: 7,
     nomeTituloInter: "Champions",
-    nacionalQtd: 7,
-    nomeTituloNacional: "Brasileirão",
+    nacionalQtd: 19,
+    nomeTituloNacional: "Seria A",
     color: "#DF061B "
+}
+const c6 ={
+    nome: "MANCHESTER CITY",
+    descricao: " A história do City inclui sucessos iniciais no início do século XX, uma era dourada nas décadas de 1960 e 1970, e um ressurgimento significativo desde a aquisição pelo Abu Dhabi United Group em 2008. Sob a liderança de treinadores renomados como Pep Guardiola, o City adotou um estilo de jogo ofensivo e baseado na posse de bola, conquistando vários títulos da Premier League, FA Cups, League Cups e sua primeira UEFA Champions League em 2022-23.",
+    image: "./assets/clubes/city.svg",
+    interQtd: 1,
+    nomeTituloInter: "Champions",
+    nacionalQtd: 10,
+    nomeTituloNacional: "Premier League",
+    color: "#ABD1F2 "
 }
 
 
-const clubes = [c1, c2, c3, c4, c5]
+
+const clubes = [c1, c2, c3, c4, c5, c6]

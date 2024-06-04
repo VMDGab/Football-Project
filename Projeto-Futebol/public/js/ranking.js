@@ -35,8 +35,8 @@ buscarRanking();
                                 ranking.innerHTML += `
                                 <div class="player">
                                 <div class="positionPlayer">
-                                    <span class="position">${i + 1}°</span>
-                                    <span class="namePlayer">${res[i].nomeUsuario}</span>
+                                    <span class="position user">${i + 1}°</span>
+                                    <span class="namePlayer user">${res[i].nomeUsuario}</span>
                                 </div>
                                 <span class="points">${res[i].pontuacao}</span>
                                 </div>`
@@ -183,7 +183,7 @@ function deixarSeguir(res) {
 function rankingGeral() {
     ranking.innerHTML = ''
     rankingHeader.innerHTML = `
-    <span class="title">Raking geral</span>
+    <span class="title">Ranking geral</span>
     <button class="btnFollow" onclick="seguindo()">Seguindo</button>
     `
     buscarRanking();

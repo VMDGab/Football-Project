@@ -101,5 +101,6 @@ const p1 = {
                      gols: 197,
                      assist: 167
                      } 
+                     
 
    const players = [p1, p2, p3, p4, p5, p6, p7]

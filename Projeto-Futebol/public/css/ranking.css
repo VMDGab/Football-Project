@@ -161,6 +161,9 @@ body {
     font-weight: 700;
     font-size: 40px;
 }
+.user{
+    color: #F5A153;
+}
 
 .btnFollow {
     height: 40px;

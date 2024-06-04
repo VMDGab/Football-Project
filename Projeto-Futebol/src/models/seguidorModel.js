@@ -41,10 +41,12 @@ function seguidores(fkUsuarioSeguido){
 function buscarSeguidorNotificacao(fkUsuarioSeguidor, fkUsuarioSeguido){
   var instrucaoSql = `select * from usuarioSeguidor where fkUsuarioSeguidor = ${fkUsuarioSeguidor}  and fkUsuarioSeguido = ${fkUsuarioSeguido}; `;
 
-
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
 }
+
+
+
 module.exports = {
   buscarRankingSeguidor,
   seguirUsuario,

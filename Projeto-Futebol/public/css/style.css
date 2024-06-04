@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar.active {
-    background-color: #ffffff3e;
+    background-color: #ffffffc1;
     box-shadow: #292929 0 2px 20px;
 }
 
@@ -354,7 +354,10 @@ body::-webkit-scrollbar-thumb {
 
 
 .navbar.active .svg{
-    stroke: #FFF;
+    stroke: #292929;
+}
+.navbar.active .spanBtn{
+    color: #292929;
 }
 
  .btn:hover:before {
@@ -389,7 +392,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 55%;
 }
 .clubName{
     font-family: "Exo 2";

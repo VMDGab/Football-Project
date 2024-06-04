@@ -27,17 +27,8 @@ welcome.textContent = `Bem Vindo, ${nomeUsuario}`
 
 fetch(`/notificacao/buscarNotificacao/${idUsuario}`).then(res => {
     res.json().then(res => {
-        console.log(res)
         for (i = 0; i <= res.length; i++) {
-            if (res[i].mensagem.indexOf('seguir') != -1) {
-                notificacao.innerHTML += ` 
-                    <div class="notificacao">
-                    <div class="textWrapper">
-                    <span class="mensagem">${res[i].mensagem}</span>
-                    </div>
-                    <button class="btnNotificacao" value='${res[i].fkUsuario}' onclick='seguir(this)'>Seguir</button>
-                    </div>`
-            } else {
+            if (res[i].mensagem.indexOf('seguir') == -1) {
                 notificacao.innerHTML += `  
                 <div class="notificacao">
             <div class="textWrapper">
@@ -46,10 +37,12 @@ fetch(`/notificacao/buscarNotificacao/${idUsuario}`).then(res => {
             <button class="btnNotificacao" onclick="jogar(this)">Jogar</button>
             </div>
             `
-            }}})
-        }).catch(function (erro) {
-            console.log(erro);
-        })
+            }
+        }
+    })
+}).catch(function (erro) {
+    console.log(erro);
+})
 
 function jogar() {
     location.replace('/dashboard/game.html')
